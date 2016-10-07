@@ -1,7 +1,7 @@
 {
   "name": "ember-cli-textarea-autosize",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "1.0.0",
+  "description": "A textarea Ember component that will `autosize` to fit text.",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -40,10 +40,16 @@
     "loader.js": "^4.0.1"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "textarea-autosize",
+    "textarea",
+    "autosize",
+    "cybertooth"
   ],
   "dependencies": {
-    "ember-cli-babel": "^5.1.6"
+    "ember-cli-babel": "^5.1.6",
+    "ember-cli-htmlbars": "^1.0.3",
+    "ember-cli-htmlbars-inline-precompile": "^0.3.1"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
