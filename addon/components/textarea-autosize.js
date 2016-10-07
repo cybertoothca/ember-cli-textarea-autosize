@@ -8,6 +8,6 @@ export default Ember.TextArea.extend({
    * @see https://github.com/jackmoore/autosize
    */
   _initializeAutosize: Ember.on('didInsertElement', function () {
-    autosize(this);
+    autosize(this.$());
   })
 });
