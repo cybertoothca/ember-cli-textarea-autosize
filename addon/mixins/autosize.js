@@ -19,11 +19,17 @@ export default Ember.Mixin.create({
    */
   _initializeAutosize: Ember.on('didInsertElement', function () {
     autosize(this.$());
-    if (Ember.isPresent(this.get('min-height'))) {
-      this.$().css('min-height', this.get('min-height'));
+    this._setCss('min-height');
+    this._setCss('max-height');
+  }),
+  /**
+   * Set the jquery css property `propertyName` with the component property `propertyName`.
+   * @param propertyName the css property.
+   * @private
+   */
+  _setCss(propertyName) {
+    if (Ember.isPresent(this.get(propertyName))) {
+      this.$().css(propertyName, this.get(propertyName));
     }
-    if (Ember.isPresent(this.get('max-height'))) {
-      this.$().css('max-height', this.get('max-height'));
-    }
-  })
+  }
 });

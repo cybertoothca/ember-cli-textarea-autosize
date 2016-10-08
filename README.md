@@ -1,9 +1,12 @@
 # ember-cli-textarea-autosize
 
-[![Build Status](https://travis-ci.org/cybertoothca/ember-cli-textarea-autosize.svg)](https://travis-ci.org/cybertoothca/ember-cli-textarea-autosize)
+[![npm version](https://badge.fury.io/js/ember-cli-textarea-autosize.svg)](https://badge.fury.io/js/ember-cli-textarea-autosize) [![Build Status](https://travis-ci.org/cybertoothca/ember-cli-textarea-autosize.svg)](https://travis-ci.org/cybertoothca/ember-cli-textarea-autosize) [![Code Climate](https://codeclimate.com/github/cybertoothca/ember-cli-textarea-autosize/badges/gpa.svg)](https://codeclimate.com/github/cybertoothca/ember-cli-textarea-autosize) [![ember-observer-badge](http://emberobserver.com/badges/ember-cli-textarea-autosize.svg)](http://emberobserver.com/addons/ember-cli-textarea-autosize) [![License](https://img.shields.io/npm/l/ember-cli-textarea-autosize.svg)](LICENSE.md)
 
-An Ember addon that provides a textarea component that adjusts its
-height according to the supplied text.
+An Ember addon that provides a textarea component that adjusts its 
+height according to the supplied text.  Included are also several 
+mixins that can be used to ensure `autofocus` works properly, 
+focused text inputs have their text selected, and ctrl+enter will 
+submit the nearest form.
 
 This addon installs from bower and uses the `autosize.js` library
 from Jack Moore: [https://github.com/jackmoore/autosize](https://github.com/jackmoore/autosize).
