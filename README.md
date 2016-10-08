@@ -1,5 +1,7 @@
 # ember-cli-textarea-autosize
 
+[![Build Status](https://travis-ci.org/cybertoothca/ember-cli-textarea-autosize.svg)](https://travis-ci.org/cybertoothca/ember-cli-textarea-autosize)
+
 An Ember addon that provides a textarea component that adjusts its
 height according to the supplied text.
 
