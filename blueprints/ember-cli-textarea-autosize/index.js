@@ -1,8 +1,12 @@
 /*jshint node:true*/
 module.exports = {
   description: 'The blueprint that adds the autosize bower library to the project.',
-  normalizeEntityName: function () {},
+  normalizeEntityName: function () {
+  },
   afterInstall: function () {
-    return this.addBowerPackageToProject('autosize');
+    return this.addBowerPackagesToProject([
+      {name: 'autosize'},
+      {name: 'keyevent'}
+    ]);
   }
 };

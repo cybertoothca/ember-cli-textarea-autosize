@@ -3,7 +3,8 @@
     "document",
     "window",
     "-Promise",
-    "autosize"
+    "autosize",
+    "KeyEvent"
   ],
   "browser": true,
   "boss": true,
