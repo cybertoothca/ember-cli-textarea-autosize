@@ -1,13 +1,13 @@
-<h1><kbd>CTRL</kbd>-<kbd>ENTER</kbd> Submits Form</h1>
+<h1><kbd>CTRL</kbd>+<kbd>ENTER</kbd> Submits Form</h1>
 
 <form {{action "submitForm" on="submit"}}>
-  <label>CTRL-ENTER Submitting Text Area</label>
+  <label>CTRL+ENTER Submitting Text Area</label>
   <br/>
   {{textarea-autosize value="{{textarea-autosize}}" autofocus=true}}
   <p>{{submitMessage}}</p>
   <br/>
 
-  <label>CTRL-ENTER Does Not Submit Basic Ember.TextArea</label>
+  <label>CTRL+ENTER Does Not Submit Basic Ember.TextArea</label>
   <br/>
   {{textarea value="{{textarea}}"}}
   <br/>
