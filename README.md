@@ -181,10 +181,10 @@ For more information on using ember-cli, visit [http://ember-cli.com/](http://em
 node repository.
 1. From the _other_ Ember project that you wish to test this addon 
 in, execute the following command:
-`npm link ember-cli-font-awesome-sass`.
+`npm link ember-cli-textarea-autosize`.
 1. Now in that same _other_ Ember project, you should go into the
 `package.json` and add the ember addon with the version _*_.  It will
-look something like this: `"ember-cli-font-awesome-sass": "*"`.  Now
+look something like this: `"ember-cli-textarea-autosize": "*"`.  Now
 when/if you execute `npm install` on this _other_ project it 
 will know to look for the linked addon rather than fetch it from
 the central repository.
@@ -193,8 +193,8 @@ the central repository.
 
 1. Remove the addon from your local node repository with the following
 command (that can be run anywhere):
-`npm uninstall -g ember-cli-font-awesome-sass`
-1. Remove the reference to the `ember-cli-font-awesome-sass` 
+`npm uninstall -g ember-cli-textarea-autosize`
+1. Remove the reference to the `ember-cli-textarea-autosize` 
 in your _other_ project's `package.json`.
 1. Run an `npm prune` from the root of your _other_ project's 
 command line.
