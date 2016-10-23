@@ -151,7 +151,7 @@ components:
 
 ## Setup
 
-* `git clone` this repository
+* `git clone git@github.com:cybertoothca/ember-cli-textarea-autosize.git`
 * `npm install`
 * `bower install`
 
