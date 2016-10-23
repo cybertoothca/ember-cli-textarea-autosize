@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-textarea-autosize",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An Ember addon that provides a textarea component that adjusts its height according to the supplied text.  Included are also several mixins that can be used to ensure `autofocus` works properly, focused text inputs have their text selected, and ctrl+enter will submit the nearest form.",
   "directories": {
     "doc": "doc",
