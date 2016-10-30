@@ -1,0 +1,11 @@
+machine:
+  node:
+    version: 4
+
+dependencies:
+  pre:
+    - npm config set spin false
+  post:
+    - npm install -g bower
+    - npm install phantomjs-prebuilt
+    - bower install
