@@ -6,6 +6,8 @@
     "ember-cli-test-loader": "0.2.2",
     "ember-qunit-notifications": "0.1.0",
     "autosize": "^3.0.17",
-    "keyevent": "^1.0.0"
+    "keyevent": "^1.0.0",
+    "bootstrap-sass": "^3.3.7",
+    "font-awesome": "^4.7.0"
   }
 }

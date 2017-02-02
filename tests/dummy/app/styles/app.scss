@@ -1,0 +1,22 @@
+//noinspection CssUnknownTarget
+@import 'ember-cli-bootstrap3-variables';
+
+$font-family-base: Lato, $font-family-base;
+$headings-font-family: Raleway, $font-family-base;
+$navbar-inverse-bg: darken($brand-success, 40%);
+
+//noinspection CssUnknownTarget
+@import "ember-cli-font-awesome-sass";
+//noinspection CssUnknownTarget
+@import 'ember-cli-bootstrap3-sass';
+//noinspection CssUnknownTarget
+@import 'ember-cli-bootstrap3-theme';
+
+body {
+  padding-top: 50px;
+  margin-bottom: 50%;
+}
+
+h3 {
+  margin-top: 3rem;
+}

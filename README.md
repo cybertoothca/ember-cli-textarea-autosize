@@ -1,6 +1,6 @@
-# ember-cli-textarea-autosize [![GitHub version](https://badge.fury.io/gh/cybertoothca%2Fember-cli-textarea-autosize.svg)](https://badge.fury.io/gh/cybertoothca%2Fember-cli-textarea-autosize)
+# ember-cli-textarea-autosize [![GitHub version](http://badge.fury.io/gh/cybertoothca%2Fember-cli-textarea-autosize.svg)](http://badge.fury.io/gh/cybertoothca%2Fember-cli-textarea-autosize) ![](http://embadge.io/v1/badge.svg?start=1.13.0)
 
-[![npm version](https://badge.fury.io/js/ember-cli-textarea-autosize.svg)](https://badge.fury.io/js/ember-cli-textarea-autosize) [![CircleCI](https://circleci.com/gh/cybertoothca/ember-cli-textarea-autosize.svg?style=shield)](https://circleci.com/gh/cybertoothca/ember-cli-textarea-autosize) [![Code Climate](https://codeclimate.com/github/cybertoothca/ember-cli-textarea-autosize/badges/gpa.svg)](https://codeclimate.com/github/cybertoothca/ember-cli-textarea-autosize) ![Dependencies](https://david-dm.org/cybertoothca/ember-cli-textarea-autosize.svg) [![ember-observer-badge](http://emberobserver.com/badges/ember-cli-textarea-autosize.svg)](http://emberobserver.com/addons/ember-cli-textarea-autosize) [![License](https://img.shields.io/npm/l/ember-cli-textarea-autosize.svg)](LICENSE.md)
+[![npm version](http://badge.fury.io/js/ember-cli-textarea-autosize.svg)](http://badge.fury.io/js/ember-cli-textarea-autosize) [![CircleCI](http://circleci.com/gh/cybertoothca/ember-cli-textarea-autosize.svg?style=shield)](http://circleci.com/gh/cybertoothca/ember-cli-textarea-autosize) [![Code Climate](http://codeclimate.com/github/cybertoothca/ember-cli-textarea-autosize/badges/gpa.svg)](http://codeclimate.com/github/cybertoothca/ember-cli-textarea-autosize) ![Dependencies](http://david-dm.org/cybertoothca/ember-cli-textarea-autosize.svg) [![ember-observer-badge](http://emberobserver.com/badges/ember-cli-textarea-autosize.svg)](http://emberobserver.com/addons/ember-cli-textarea-autosize) [![License](http://img.shields.io/npm/l/ember-cli-textarea-autosize.svg)](LICENSE.md)
 
 An Ember addon that provides a textarea component that adjusts its 
 height according to the supplied text.  Included are also several 
@@ -10,6 +10,11 @@ submit the nearest form.
 
 This addon installs from bower and uses the `autosize.js` library
 from Jack Moore: [https://github.com/jackmoore/autosize](https://github.com/jackmoore/autosize).
+
+## Demo
+
+The demonstration web application can be found here:
+[http://ember-cli-textarea-autosize.cybertooth.io/](http://ember-cli-textarea-autosize.cybertooth.io/). 
 
 ## What Does This Addon Do?
 
@@ -216,6 +221,9 @@ look something like this: `"ember-cli-textarea-autosize": "*"`.  Now
 when/if you execute `npm install` on this _other_ project it 
 will know to look for the linked addon rather than fetch it from
 the central repository.
+1. Lastly, in the _other_ Ember project run the blueprint for the
+ `ember-cli-textarea-autosize` addon by executing: `ember g ember-cli-textarea-autosize`.  This
+will install the appropriate Ember Addons and Bower dependencies.
 
 ## Unlinking
 
@@ -224,6 +232,18 @@ command (that can be run anywhere):
 `npm uninstall -g ember-cli-textarea-autosize`
 1. Remove the reference to the `ember-cli-textarea-autosize` 
 in your _other_ project's `package.json`.
-1. Run an `npm prune` from the root of your _other_ project's 
-command line.
+1. Run an `npm prune` and `bower prune` from the root of your _other_ project's command line.
 
+
+# Deploying The Dummy Application
+
+Make sure your `~/.aws/credentials` file has a profile named _cybertooth_ 
+with a valid key and secret,
+
+    [cybertooth]
+    aws_access_key_id = <KEY>
+    aws_secret_access_key = <SECRET>
+
+Deploy by invoking the following command: `ember deploy production`
+
+Confirm your changes are showing up in our S3 container: http://ember-cli-textarea-autosize.cybertooth.io/
