@@ -4,7 +4,7 @@
   <div class="col-sm-4">
     <form class="form" {{action "submit" on="submit"}}>
       <div class="form-group">
-        {{textarea-autosize classNames="form-control" max-height="100px"}}
+        {{textarea-autosize classNames="form-control" max-height="100px" placeholder="Ctrl+Enter will submit nearest form."}}
         <p class="help-block">
           Press Ctrl-Enter to submit the form that this textarea belongs to. The label will flash success colour
           once the submit event is triggered.
@@ -17,7 +17,7 @@
   </div>
   <div class="col-sm-8">
     {{!-- @formatter:off --}}
-<pre>\{{textarea-autosize classNames="form-control" max-height="100px"}}
+<pre>\{{textarea-autosize classNames="form-control" max-height="100px" placeholder="Ctrl+Enter will submit nearest form."}}
 </pre>
 {{!-- @formatter:on --}}
   </div>
