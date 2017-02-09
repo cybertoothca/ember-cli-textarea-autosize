@@ -4,6 +4,8 @@
 $font-family-base: Lato, $font-family-base;
 $headings-font-family: Raleway, $font-family-base;
 $navbar-inverse-bg: darken($brand-success, 40%);
+$navbar-inverse-link-hover-bg: darken($brand-success, 47%);
+$navbar-inverse-link-active-bg: darken($brand-success, 43%);
 
 //noinspection CssUnknownTarget
 @import "ember-cli-font-awesome-sass";
