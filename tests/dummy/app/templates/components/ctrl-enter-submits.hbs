@@ -1,0 +1,26 @@
+<h3><kbd>CTRL+ENTER</kbd> Submits The Nearest Form</h3>
+
+<div class="row">
+  <div class="col-sm-4">
+    <form class="form" {{action "submit" on="submit"}}>
+      <div class="form-group">
+        {{textarea-autosize classNames="form-control" max-height="100px"}}
+        <p class="help-block">
+          Press Ctrl-Enter to submit the form that this textarea belongs to. The label will flash success colour
+          once the submit event is triggered.
+        </p>
+      </div>
+      <div>
+        <span class="label label-default label-submit-event-triggered">Submit Event Triggered</span>
+      </div>
+    </form>
+  </div>
+  <div class="col-sm-8">
+    {{!-- @formatter:off --}}
+<pre>\{{textarea-autosize classNames="form-control" max-height="100px"}}
+</pre>
+{{!-- @formatter:on --}}
+  </div>
+</div>
+
+<hr/>

@@ -1,29 +1,61 @@
-<h1>Demo</h1>
+<section class="container">
+  <h1>
+    ember-cli-textarea-autosize
+    <img src="http://badge.fury.io/gh/cybertoothca%2Fember-cli-textarea-autosize.svg"
+         alt="ember-cli-bootstrap3-popover version">
+    <img src="http://badge.fury.io/js/ember-cli-textarea-autosize.svg" alt="ember-cli-bootstrap3-popover npm"/>
+  </h1>
 
-<ul>
-  <li>
-    {{#link-to "demo-min-height"}}
-      Demo Of Minimum Height (Mixin `autosize`)
-    {{/link-to}}
-  </li>
-  <li>
-    {{#link-to "demo-max-height"}}
-      Demo Of Maximum Height (Mixin `autosize`)
-    {{/link-to}}
-  </li>
-  <li>
-    {{#link-to "demo-ctrl-enter-submits"}}
-      Demo Of <kbd>CTRL</kbd>+<kbd>ENTER</kbd> Submits Form (Mixin `ctrl-enter-submits-form`)
-    {{/link-to}}
-  </li>
-  <li>
-    {{#link-to "demo-trigger-focus"}}
-      Demo Of Auto-Focus Working Across Template Loads (Mixin `trigger-focus`)
-    {{/link-to}}
-  </li>
-  <li>
-    {{#link-to "demo-focus-selects-text"}}
-      Demo Select Text On Focus (Mixin `focus-selects-text`)
-    {{/link-to}}
-  </li>
-</ul>
+  <h2>Examples</h2>
+  <p>
+    This component works like a typical textarea component, e.g. bind the value property to your model.
+    Keep in mind this textarea has some extra bells and whistles like fixed <em>auto-focus</em>,
+    <em>focus-selects-text</em>, and <em>ctrl-enter</em> submits the nearest form.
+  </p>
+</section>
+
+<section class="container">
+  {{min-height}}
+</section>
+
+<section class="container">
+  {{max-height}}
+</section>
+
+<section class="container">
+  {{ctrl-enter-submits}}
+</section>
+
+{{!--
+<section class="container">
+  <h1>Demo</h1>
+
+  <ul>
+    <li>
+      {{#link-to "demo-min-height"}}
+        Demo Of Minimum Height (Mixin `autosize`)
+      {{/link-to}}
+    </li>
+    <li>
+      {{#link-to "demo-max-height"}}
+        Demo Of Maximum Height (Mixin `autosize`)
+      {{/link-to}}
+    </li>
+    <li>
+      {{#link-to "demo-ctrl-enter-submits"}}
+        Demo Of <kbd>CTRL</kbd>+<kbd>ENTER</kbd> Submits Form (Mixin `ctrl-enter-submits-form`)
+      {{/link-to}}
+    </li>
+    <li>
+      {{#link-to "demo-trigger-focus"}}
+        Demo Of Auto-Focus Working Across Template Loads (Mixin `trigger-focus`)
+      {{/link-to}}
+    </li>
+    <li>
+      {{#link-to "demo-focus-selects-text"}}
+        Demo Select Text On Focus (Mixin `focus-selects-text`)
+      {{/link-to}}
+    </li>
+  </ul>
+</section>
+--}}
