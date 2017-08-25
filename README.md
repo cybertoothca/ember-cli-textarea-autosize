@@ -1,6 +1,6 @@
 # ember-cli-textarea-autosize [![GitHub version](http://badge.fury.io/gh/cybertoothca%2Fember-cli-textarea-autosize.svg)](http://badge.fury.io/gh/cybertoothca%2Fember-cli-textarea-autosize) ![](http://embadge.io/v1/badge.svg?start=1.13.0)
 
-[![npm version](http://badge.fury.io/js/ember-cli-textarea-autosize.svg)](http://badge.fury.io/js/ember-cli-textarea-autosize) [![CircleCI](http://circleci.com/gh/cybertoothca/ember-cli-textarea-autosize.svg?style=shield)](http://circleci.com/gh/cybertoothca/ember-cli-textarea-autosize) [![Code Climate](http://codeclimate.com/github/cybertoothca/ember-cli-textarea-autosize/badges/gpa.svg)](http://codeclimate.com/github/cybertoothca/ember-cli-textarea-autosize) ![Dependencies](http://david-dm.org/cybertoothca/ember-cli-textarea-autosize.svg) [![ember-observer-badge](http://emberobserver.com/badges/ember-cli-textarea-autosize.svg)](http://emberobserver.com/addons/ember-cli-textarea-autosize) [![License](http://img.shields.io/npm/l/ember-cli-textarea-autosize.svg)](LICENSE.md)
+[![npm version](http://badge.fury.io/js/ember-cli-textarea-autosize.svg)](http://badge.fury.io/js/ember-cli-textarea-autosize) ![downloads](https://img.shields.io/npm/dy/ember-cli-textarea-autosize.svg) [![CircleCI](http://circleci.com/gh/cybertoothca/ember-cli-textarea-autosize.svg?style=shield)](http://circleci.com/gh/cybertoothca/ember-cli-textarea-autosize) [![Code Climate](http://codeclimate.com/github/cybertoothca/ember-cli-textarea-autosize/badges/gpa.svg)](http://codeclimate.com/github/cybertoothca/ember-cli-textarea-autosize) ![Dependencies](http://david-dm.org/cybertoothca/ember-cli-textarea-autosize.svg) [![ember-observer-badge](http://emberobserver.com/badges/ember-cli-textarea-autosize.svg)](http://emberobserver.com/addons/ember-cli-textarea-autosize) [![License](http://img.shields.io/npm/l/ember-cli-textarea-autosize.svg)](LICENSE.md)
 
 An Ember addon that provides a textarea component that adjusts its 
 height according to the supplied text.  Included are also several 
@@ -10,6 +10,16 @@ submit the nearest form.
 
 This addon installs from bower and uses the `autosize.js` library
 from Jack Moore: [https://github.com/jackmoore/autosize](https://github.com/jackmoore/autosize).
+
+## Tested Against
+
+[![ember-lts-2.4](https://img.shields.io/badge/ember--try-ember--lts--2.4-brightgreen.svg)](https://circleci.com/gh/cybertoothca/ember-cli-textarea-autosize)
+[![ember-lts-2.8](https://img.shields.io/badge/ember--try-ember--lts--2.8-brightgreen.svg)](https://circleci.com/gh/cybertoothca/ember-cli-textarea-autosize)
+[![ember-lts-2.12](https://img.shields.io/badge/ember--try-ember--lts--2.12-brightgreen.svg)](https://circleci.com/gh/cybertoothca/ember-cli-textarea-autosize)
+
+[![ember-release](https://img.shields.io/badge/ember--try-ember--release-brightgreen.svg)](https://circleci.com/gh/cybertoothca/ember-cli-textarea-autosize)
+[![ember-beta](https://img.shields.io/badge/ember--try-ember--beta-brightgreen.svg)](https://circleci.com/gh/cybertoothca/ember-cli-textarea-autosize)
+[![ember-canary](https://img.shields.io/badge/ember--try-ember--canary-brightgreen.svg)](https://circleci.com/gh/cybertoothca/ember-cli-textarea-autosize)
 
 ## Demo
 
@@ -42,7 +52,9 @@ to submit the nearest form element.
 
 Like most other Ember addons:
 
-    $ ember install ember-cli-textarea-autosize
+```
+ember install ember-cli-textarea-autosize
+```
 
 ### Upgrading
 
@@ -55,25 +67,33 @@ you are done to get the latest version of the addon.
 This textarea component extends the `Ember.TextArea` component and
 can be used exactly the same way.
 
-    {{textarea-autosize}}
+```
+{{textarea-autosize}}
+```
 
 ### Minimum Height (default is 2 rows)
 
 If you need to set the minimum height of the `<textarea>`, set the 
 `rows` property:
 
-    {{textarea-autosize rows=6}}
+```
+{{textarea-autosize rows=6}}
+```
 
 ...or you can specify the `min-height` property
 
-    {{textarea-autosize min-height="200px"}}
+```
+{{textarea-autosize min-height="200px"}}
+```
 
 ### Maximum Height (when to start scrolling)
 
 The `<textarea>` will continue to grow indefinitely unless you set the
 `max-height` property:
 
-    {{textarea-autosize max-height="500px"}}
+```
+{{textarea-autosize max-height="500px"}}
+```
 
 ## For additional information about the Ember.TextArea:
 
@@ -102,20 +122,22 @@ To apply this _fix_ to the `Ember.TextField` and `Ember.TextArea`
 you can reopen the `Ember.TextSupport` mixin from your `app/app.js`
 file:
 
-    // your `app/app.js` file
-    import Ember from 'ember';
-    ...
-    // you must import the mixin
-    import TriggerFocusMixin from 'ember-cli-textarea-autosize/mixins/trigger-focus';
-    
-    let App;
-    
-    ...
-    
-    // reopening Ember's `TextSupport` mixin
-    Ember.TextSupport.reopen(TriggerFocusMixin);
-    
-    export default App;
+```
+// your `app/app.js` file
+import Ember from 'ember';
+...
+// you must import the mixin
+import TriggerFocusMixin from 'ember-cli-textarea-autosize/mixins/trigger-focus';
+
+let App;
+
+...
+
+// reopening Ember's `TextSupport` mixin
+Ember.TextSupport.reopen(TriggerFocusMixin);
+
+export default App;
+```
 
 
 ### `focus-selects-text` Mixin
@@ -129,6 +151,7 @@ Do you want to apply this to all of your `Ember.TextField` and
 `Ember.TextSupport` mixin and include this mixin.  From your 
 `app/app.js`:
 
+```
     // your `app/app.js` file
     import Ember from 'ember';
     ...
@@ -143,6 +166,7 @@ Do you want to apply this to all of your `Ember.TextField` and
     Ember.TextSupport.reopen(FocusSelectsTextMixin);
     
     export default App;
+```
 
 
 ### `ctrl-enter-submits-form` Mixin
@@ -184,9 +208,23 @@ components:
 
 ## Setup
 
-* `git clone git@github.com:cybertoothca/ember-cli-textarea-autosize.git`
-* `npm install`
-* `bower install`
+### Checkout
+
+```
+git clone git@github.com:cybertoothca/ember-cli-textarea-autosize.git
+```
+
+### With NPM
+
+```
+npm install
+```
+
+### With Yarn
+
+```
+yarn
+```
 
 ## Running The Dummy Application
 
@@ -240,10 +278,21 @@ in your _other_ project's `package.json`.
 Make sure your `~/.aws/credentials` file has a profile named _cybertooth_ 
 with a valid key and secret,
 
-    [cybertooth]
-    aws_access_key_id = <KEY>
-    aws_secret_access_key = <SECRET>
+```
+[cybertooth]
+aws_access_key_id = <KEY>
+aws_secret_access_key = <SECRET>
+```
 
 Deploy by invoking the following command: `ember deploy production`
 
 Confirm your changes are showing up in our S3 container: http://ember-cli-textarea-autosize.cybertooth.io/
+
+# Releasing & Publishing To NPM
+
+```
+npm version x.y.z-sub.#
+git push
+git push --tags
+npm publish
+```

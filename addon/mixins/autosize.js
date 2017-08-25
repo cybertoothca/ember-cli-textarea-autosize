@@ -1,3 +1,4 @@
+/* global autosize */
 import Ember from 'ember';
 
 /**

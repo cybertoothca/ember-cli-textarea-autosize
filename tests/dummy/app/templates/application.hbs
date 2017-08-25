@@ -1,5 +1,5 @@
-<nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
-  <div class="container-fluid">
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
               data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      {{#link-to "index" classNames="navbar-brand"}}
+      {{#link-to "index" class="navbar-brand"}}
         ember-cli-textarea-autosize
       {{/link-to}}
     </div>
@@ -16,9 +16,25 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="https://cybertoothca.github.io/ember-cli-textarea-autosize/" target="_blank">
+            <i class="fa fa-book"></i>
+            Docs
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/cybertoothca/ember-cli-textarea-autosize" target="_blank">
+            <i class="fa fa-github"></i>
+            GitHub
+          </a>
+        </li>
+        <li>
+          <a href="https://www.npmjs.com/package/ember-cli-textarea-autosize" target="_blank">
+            npm
+          </a>
+        </li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-             aria-expanded="false">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
             Other Projects <span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
@@ -32,9 +48,26 @@
                 ember-cli-bootstrap3-popover
               </a>
             </li>
+            {{!--
+                        <li>
+                          <a href="http://ember-cli-bootstrap3-tooltip.cybertooth.io/" target="_blank">
+                            ember-cli-bootstrap3-tooltip
+                          </a>
+                        </li>
+            --}}
+            <li>
+              <a href="http://ember-cli-date-textbox.cybertooth.io/" target="_blank">
+                ember-cli-date-textbox
+              </a>
+            </li>
             <li>
               <a href="http://ember-cli-marked-down.cybertooth.io/" target="_blank">
                 ember-cli-marked-down
+              </a>
+            </li>
+            <li>
+              <a href="http://ember-cli-text-support-mixins.cybertooth.io/" target="_blank">
+                ember-cli-text-support-mixins
               </a>
             </li>
             <li>
@@ -49,20 +82,20 @@
             </li>
           </ul>
         </li>
-        <li>
-          <a href="https://github.com/cybertoothca/ember-cli-textarea-autosize" target="_blank">
-            <i class="fa fa-github"></i>
-            GitHub
-          </a>
-        </li>
-        <li>
-          <a href="https://www.npmjs.com/package/ember-cli-textarea-autosize" target="_blank">
-            npm
-          </a>
-        </li>
       </ul>
     </div>
   </div>
 </nav>
+
+<section class="container">
+  <div class="page-header">
+    <h1>
+      Demo
+      <img src="http://badge.fury.io/gh/cybertoothca%2Fember-cli-textarea-autosize.svg"
+           alt="ember-cli-textarea-autosize version">
+      <img src="https://badge.fury.io/js/ember-cli-textarea-autosize.svg" alt="ember-cli-textarea-autosize npm"/>
+    </h1>
+  </div>
+</section>
 
 {{outlet}}

@@ -1,3 +1,4 @@
+/* global KeyEvent */
 import Ember from 'ember';
 
 /**
