@@ -5,6 +5,8 @@ module.exports = {
   normalizeEntityName: function () {
   },
   afterInstall: function (/*options*/) {
-    return this.addPackagesToProject([{name: 'autosize'}]);
+    return this.addAddonsToProject([{name: 'ember-cli-text-support-mixins'}]).then(() => {
+      return this.addPackagesToProject([{name: 'autosize'}])
+    });
   }
 };
