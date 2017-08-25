@@ -3,9 +3,19 @@
 
 module.exports = {
   name: 'ember-cli-textarea-autosize',
+  options: {
+    nodeAssets: {
+      autosize: {
+        vendor: {
+          srcDir: 'dist',
+          destDir: 'ember-cli-textarea-autosize',
+          include: ['autosize.js']
+        }
+      }
+    }
+  },
   included: function (app) {
-    this._super.included(app);
-    app.import(app.bowerDirectory + '/autosize/dist/autosize.js');
-    app.import(app.bowerDirectory + '/keyevent/src/keyevent.js');
+    this._super.included.apply(this, arguments);
+    app.import('vendor/ember-cli-textarea-autosize/autosize.js');
   }
 };

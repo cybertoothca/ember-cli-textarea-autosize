@@ -6,48 +6,43 @@
   </p>
 </section>
 
-<section class="container">
-  {{min-height}}
+<section>
+  <div class="container">
+    <h3>Autofocus</h3>
+
+    <div class="row">
+      <div class="col-sm-4 form-group">
+        {{textarea-autosize
+          autofocus=true classNames="form-control" placeholder="Your cursor should be here to begin with" value=""}}
+        <p class="help-block">
+          This textarea's autofocus will work between transitions.
+        </p>
+      </div>
+      <div class="col-sm-8">
+        {{!-- @formatter:off --}}
+<pre>\{{textarea-autosize autofocus=true classNames="form-control" placeholder="..." value="..."}}
+</pre>
+{{!-- @formatter:on --}}
+      </div>
+    </div>
+  </div>
 </section>
 
-<section class="container">
-  {{max-height}}
+<section>
+  <div class="container">
+    {{min-height}}
+  </div>
+
 </section>
 
-<section class="container">
-  {{ctrl-enter-submits}}
+<section>
+  <div class="container">
+    {{max-height}}
+  </div>
 </section>
 
-{{!--
-<section class="container">
-  <h1>Demo</h1>
-
-  <ul>
-    <li>
-      {{#link-to "demo-min-height"}}
-        Demo Of Minimum Height (Mixin `autosize`)
-      {{/link-to}}
-    </li>
-    <li>
-      {{#link-to "demo-max-height"}}
-        Demo Of Maximum Height (Mixin `autosize`)
-      {{/link-to}}
-    </li>
-    <li>
-      {{#link-to "demo-ctrl-enter-submits"}}
-        Demo Of <kbd>CTRL</kbd>+<kbd>ENTER</kbd> Submits Form (Mixin `ctrl-enter-submits-form`)
-      {{/link-to}}
-    </li>
-    <li>
-      {{#link-to "demo-trigger-focus"}}
-        Demo Of Auto-Focus Working Across Template Loads (Mixin `trigger-focus`)
-      {{/link-to}}
-    </li>
-    <li>
-      {{#link-to "demo-focus-selects-text"}}
-        Demo Select Text On Focus (Mixin `focus-selects-text`)
-      {{/link-to}}
-    </li>
-  </ul>
+<section>
+  <div class="container">
+    {{ctrl-enter-submits}}
+  </div>
 </section>
---}}
