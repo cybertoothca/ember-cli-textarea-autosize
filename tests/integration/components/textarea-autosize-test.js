@@ -19,12 +19,3 @@ test('when rendering without a block', function (assert) {
   this.render(hbs `{{textarea-autosize value="Some text"}}`);
   assert.equal(this.$('textarea').val().trim(), 'Some text');
 });
-
-test('when rendering with a block', function (assert) {
-  this.render(hbs `
-    {{#textarea-autosize}}
-      template block text
-    {{/textarea-autosize}}
-  `);
-  assert.equal(this.$().text().trim(), 'template block text');
-});

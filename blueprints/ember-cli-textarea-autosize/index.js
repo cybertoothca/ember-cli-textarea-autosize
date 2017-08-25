@@ -1,12 +1,10 @@
-/*jshint node:true*/
+/* eslint-env node */
 module.exports = {
-  description: 'The blueprint that adds the autosize bower library to the project.',
+  name: 'ember-cli-textarea-autosize',
+  description: '',
   normalizeEntityName: function () {
   },
   afterInstall: function (/*options*/) {
-    return this.addBowerPackagesToProject([
-      {name: 'autosize'},
-      {name: 'keyevent'}
-    ]);
+    return this.addPackagesToProject([{name: 'autosize'}]);
   }
 };
