@@ -43,7 +43,7 @@ code breaks.
 You should be able to easily move your code over to the `ember-cli-text-support-mixins`
 variation:
 
-```
+```js
 // import TriggerFocus from 'ember-cli-textarea-autosize/mixins/trigger-focus'
 // ...now becomes ...
 import TriggerFocus from 'ember-cli-text-support-mixins/mixins/trigger-focus';
@@ -84,7 +84,7 @@ This textarea component extends the `ember-cli-text-support-mixins` add-on's
 `text-area` component.  This text area does not accept a block, instead always
 pass your value to the `value attribute`. 
 
-```
+```handlebars
 {{textarea-autosize value=someModel.largeTextAttribute}}
 ```
 
@@ -93,13 +93,13 @@ pass your value to the `value attribute`.
 If you need to set the minimum height of the `<textarea>`, set the 
 `rows` property:
 
-```
+```handlebars
 {{textarea-autosize rows=6 ...}}
 ```
 
 ...or you can specify the `min-height` property
 
-```
+```handlebars
 {{textarea-autosize min-height="200px" ...}}
 ```
 
@@ -108,7 +108,7 @@ If you need to set the minimum height of the `<textarea>`, set the
 The `<textarea>` will continue to grow indefinitely unless you set the
 `max-height` property:
 
-```
+```handlebars
 {{textarea-autosize max-height="500px" ...}}
 ```
 
