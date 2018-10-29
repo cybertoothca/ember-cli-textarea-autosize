@@ -1,5 +1,13 @@
 version: 2
 jobs:
+  bower_and_cache:
+    docker:
+    - image: circleci/node:6.14.4-browsers
+    steps:
+    - checkout
+    - run:
+        name: Yarn Install Bower + Bower Install
+        command: yarn global add bower && bower install
   yarn_and_cache:
     docker:
     - image: circleci/node:6.14.4-browsers
