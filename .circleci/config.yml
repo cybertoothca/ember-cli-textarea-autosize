@@ -125,25 +125,33 @@ workflows:
   version: 2
   ember_try:
     jobs:
+    - bower_and_cache
     - yarn_and_cache
     - test_default:
         requires:
+        - bower_and_cache
         - yarn_and_cache
     - test_release:
         requires:
+        - bower_and_cache
         - yarn_and_cache
     - test_beta:
         requires:
+        - bower_and_cache
         - yarn_and_cache
     - test_canary:
         requires:
+        - bower_and_cache
         - yarn_and_cache
     - test_lts_2_12:
         requires:
+        - bower_and_cache
         - yarn_and_cache
     - test_lts_2_8:
         requires:
+        - bower_and_cache
         - yarn_and_cache
     - test_lts_2_4:
         requires:
+        - bower_and_cache
         - yarn_and_cache
