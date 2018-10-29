@@ -43,6 +43,8 @@ jobs:
     - restore_cache:
         keys:
         - bower-cache-{{ .Branch }}-{{ checksum "bower.json" }}
+    - restore_cache:
+        keys:
         - v1-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
         - v1-deps-{{ .Branch }}-
         - v1-deps-
@@ -62,6 +64,8 @@ jobs:
     - restore_cache:
         keys:
         - bower-cache-{{ .Branch }}-{{ checksum "bower.json" }}
+    - restore_cache:
+        keys:
         - v1-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
         - v1-deps-{{ .Branch }}-
         - v1-deps-
@@ -76,6 +80,8 @@ jobs:
     - restore_cache:
         keys:
         - bower-cache-{{ .Branch }}-{{ checksum "bower.json" }}
+    - restore_cache:
+        keys:
         - v1-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
         - v1-deps-{{ .Branch }}-
         - v1-deps-
@@ -90,6 +96,8 @@ jobs:
     - restore_cache:
         keys:
         - bower-cache-{{ .Branch }}-{{ checksum "bower.json" }}
+    - restore_cache:
+        keys:
         - v1-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
         - v1-deps-{{ .Branch }}-
         - v1-deps-
@@ -104,6 +112,8 @@ jobs:
     - restore_cache:
         keys:
         - bower-cache-{{ .Branch }}-{{ checksum "bower.json" }}
+    - restore_cache:
+        keys:
         - v1-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
         - v1-deps-{{ .Branch }}-
         - v1-deps-
@@ -118,6 +128,8 @@ jobs:
     - restore_cache:
         keys:
         - bower-cache-{{ .Branch }}-{{ checksum "bower.json" }}
+    - restore_cache:
+        keys:
         - v1-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
         - v1-deps-{{ .Branch }}-
         - v1-deps-
@@ -132,6 +144,8 @@ jobs:
     - restore_cache:
         keys:
         - bower-cache-{{ .Branch }}-{{ checksum "bower.json" }}
+    - restore_cache:
+        keys:
         - v1-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
         - v1-deps-{{ .Branch }}-
         - v1-deps-
