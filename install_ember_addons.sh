@@ -8,5 +8,6 @@ ember install ember-cli-deploy-s3
 ember install ember-cli-font-awesome-sass
 ember install ember-cli-text-support-mixins
 
-npm install --save-dev bootswatch@3.3
-npm install --save autosize@3
+yarn add ember-cli-node-assets
+yarn add autosize@3.0.21
+yarn add bootswatch@3.3.7 --dev
