@@ -1,0 +1,141 @@
+version: 2
+jobs:
+  yarn_and_cache:
+    docker:
+    - image: circleci/node:6.14.4-browsers
+    steps:
+    - checkout
+    - restore_cache:
+        keys:
+        - v1-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
+        - v1-deps-{{ .Branch }}-
+        - v1-deps-
+    - run:
+        name: Yarn Install
+        command: yarn install
+    - save_cache:
+        key: v1-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
+        paths:
+        - ./node_modules
+  test_default:
+    docker:
+    - image: circleci/node:6.14.4-browsers
+    steps:
+    - checkout
+    - restore_cache:
+        keys:
+        - v1-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
+        - v1-deps-{{ .Branch }}-
+        - v1-deps-
+    - run:
+        name: Create Test Results Directory
+        command: mkdir -p tmp/test-results
+    - run:
+        name: Ember Try
+        command: ./node_modules/.bin/ember try:one ember-default --skip-cleanup --- ember test --reporter=xunit --silent > tmp/test-results/output.xml
+    - store_test_results:
+        path: tmp/test-results
+  test_release:
+    docker:
+    - image: circleci/node:6.14.4-browsers
+    steps:
+    - checkout
+    - restore_cache:
+        keys:
+        - v1-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
+        - v1-deps-{{ .Branch }}-
+        - v1-deps-
+    - run:
+        name: Ember Try
+        command: ./node_modules/.bin/ember try:one ember-release --skip-cleanup
+  test_beta:
+    docker:
+    - image: circleci/node:6.14.4-browsers
+    steps:
+    - checkout
+    - restore_cache:
+        keys:
+        - v1-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
+        - v1-deps-{{ .Branch }}-
+        - v1-deps-
+    - run:
+        name: Ember Try
+        command: ./node_modules/.bin/ember try:one ember-beta --skip-cleanup
+  test_canary:
+    docker:
+    - image: circleci/node:6.14.4-browsers
+    steps:
+    - checkout
+    - restore_cache:
+        keys:
+        - v1-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
+        - v1-deps-{{ .Branch }}-
+        - v1-deps-
+    - run:
+        name: Ember Try
+        command: ./node_modules/.bin/ember try:one ember-canary --skip-cleanup
+  test_lts_2_4:
+    docker:
+    - image: circleci/node:6.14.4-browsers
+    steps:
+    - checkout
+    - restore_cache:
+        keys:
+        - v1-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
+        - v1-deps-{{ .Branch }}-
+        - v1-deps-
+    - run:
+        name: Ember Try
+        command: ./node_modules/.bin/ember try:one ember-lts-2.4 --skip-cleanup
+  test_lts_2_8:
+    docker:
+    - image: circleci/node:6.14.4-browsers
+    steps:
+    - checkout
+    - restore_cache:
+        keys:
+        - v1-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
+        - v1-deps-{{ .Branch }}-
+        - v1-deps-
+    - run:
+        name: Ember Try
+        command: ./node_modules/.bin/ember try:one ember-lts-2.8 --skip-cleanup
+  test_lts_2_12:
+    docker:
+    - image: circleci/node:6.14.4-browsers
+    steps:
+    - checkout
+    - restore_cache:
+        keys:
+        - v1-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
+        - v1-deps-{{ .Branch }}-
+        - v1-deps-
+    - run:
+        name: Ember Try
+        command: ./node_modules/.bin/ember try:one ember-lts-2.12 --skip-cleanup
+workflows:
+  version: 2
+  ember_try:
+    jobs:
+    - yarn_and_cache
+    - test_default:
+        requires:
+        - yarn_and_cache
+    - test_release:
+        requires:
+        - yarn_and_cache
+    - test_beta:
+        requires:
+        - yarn_and_cache
+    - test_canary:
+        requires:
+        - yarn_and_cache
+    - test_lts_2_12:
+        requires:
+        - yarn_and_cache
+    - test_lts_2_8:
+        requires:
+        - yarn_and_cache
+    - test_lts_2_4:
+        requires:
+        - yarn_and_cache
