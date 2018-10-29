@@ -1,13 +1,5 @@
 version: 2
 jobs:
-  bower_and_cache:
-    docker:
-    - image: circleci/node:6.14.4-browsers
-    steps:
-    - checkout
-    - run:
-        name: Yarn Install Bower + Bower Install
-        command: yarn global add bower && bower install
   yarn_and_cache:
     docker:
     - image: circleci/node:6.14.4-browsers
@@ -18,6 +10,12 @@ jobs:
         - v1-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
         - v1-deps-{{ .Branch }}-
         - v1-deps-
+    - run:
+        name: Install Bower
+        command: sudo yarn global add bower
+    - run:
+        name: Bower Install
+        command: bower install
     - run:
         name: Yarn Install
         command: yarn install
@@ -125,33 +123,25 @@ workflows:
   version: 2
   ember_try:
     jobs:
-    - bower_and_cache
     - yarn_and_cache
     - test_default:
         requires:
-        - bower_and_cache
         - yarn_and_cache
     - test_release:
         requires:
-        - bower_and_cache
         - yarn_and_cache
     - test_beta:
         requires:
-        - bower_and_cache
         - yarn_and_cache
     - test_canary:
         requires:
-        - bower_and_cache
         - yarn_and_cache
     - test_lts_2_12:
         requires:
-        - bower_and_cache
         - yarn_and_cache
     - test_lts_2_8:
         requires:
-        - bower_and_cache
         - yarn_and_cache
     - test_lts_2_4:
         requires:
-        - bower_and_cache
         - yarn_and_cache
