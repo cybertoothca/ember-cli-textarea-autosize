@@ -22,6 +22,7 @@ jobs:
     - save_cache:
         key: v1-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
         paths:
+        - ./bower_components
         - ./node_modules
   test_default:
     docker:
