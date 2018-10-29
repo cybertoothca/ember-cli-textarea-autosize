@@ -7,7 +7,7 @@ jobs:
     - checkout
     - restore_cache:
         keys:
-        - v1-deps-{{ .Branch }}-{{ checksum "bower.json" }}
+        - bower-cache-{{ .Branch }}-{{ checksum "bower.json" }}
     - run:
         name: Install Bower
         command: sudo yarn global add bower
@@ -15,7 +15,7 @@ jobs:
         name: Bower Install
         command: bower install
     - save_cache:
-        key: v1-deps-{{ .Branch }}-{{ checksum "bower.json" }}
+        key: bower-cache-{{ .Branch }}-{{ checksum "bower.json" }}
         paths:
         - ./bower_components
   yarn_and_cache:
@@ -42,7 +42,7 @@ jobs:
     - checkout
     - restore_cache:
         keys:
-        - v1-deps-{{ .Branch }}-{{ checksum "bower.json" }}
+        - bower-cache-{{ .Branch }}-{{ checksum "bower.json" }}
         - v1-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
         - v1-deps-{{ .Branch }}-
         - v1-deps-
@@ -61,6 +61,7 @@ jobs:
     - checkout
     - restore_cache:
         keys:
+        - bower-cache-{{ .Branch }}-{{ checksum "bower.json" }}
         - v1-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
         - v1-deps-{{ .Branch }}-
         - v1-deps-
@@ -74,6 +75,7 @@ jobs:
     - checkout
     - restore_cache:
         keys:
+        - bower-cache-{{ .Branch }}-{{ checksum "bower.json" }}
         - v1-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
         - v1-deps-{{ .Branch }}-
         - v1-deps-
@@ -87,6 +89,7 @@ jobs:
     - checkout
     - restore_cache:
         keys:
+        - bower-cache-{{ .Branch }}-{{ checksum "bower.json" }}
         - v1-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
         - v1-deps-{{ .Branch }}-
         - v1-deps-
@@ -100,6 +103,7 @@ jobs:
     - checkout
     - restore_cache:
         keys:
+        - bower-cache-{{ .Branch }}-{{ checksum "bower.json" }}
         - v1-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
         - v1-deps-{{ .Branch }}-
         - v1-deps-
@@ -113,6 +117,7 @@ jobs:
     - checkout
     - restore_cache:
         keys:
+        - bower-cache-{{ .Branch }}-{{ checksum "bower.json" }}
         - v1-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
         - v1-deps-{{ .Branch }}-
         - v1-deps-
@@ -126,6 +131,7 @@ jobs:
     - checkout
     - restore_cache:
         keys:
+        - bower-cache-{{ .Branch }}-{{ checksum "bower.json" }}
         - v1-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
         - v1-deps-{{ .Branch }}-
         - v1-deps-
