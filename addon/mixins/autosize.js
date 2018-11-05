@@ -10,22 +10,25 @@ import Mixin from '@ember/object/mixin';
  * @see http://www.jacklmoore.com/autosize/
  */
 export default Mixin.create({
+
   /**
    * Once this textarea is being destroyed let's help clean up the DOM by removing the autosize binding.
    * @see http://www.jacklmoore.com/autosize/
    */
   _removeAutosize: on('willDestroyElement', function () {
-    autosize.destroy(this.$());
+    autosize.destroy(this.element);
   }),
+
   /**
    * Once this textarea is inserted in the DOM initialize on autosize.
    * @see https://github.com/jackmoore/autosize
    */
   _initializeAutosize: on('didInsertElement', function () {
-    autosize(this.$());
+    autosize(this.element);
     this._setCss('min-height');
     this._setCss('max-height');
   }),
+
   /**
    * Set the jquery css property `propertyName` with the component property `propertyName`.
    * @param propertyName the css property.
@@ -33,7 +36,7 @@ export default Mixin.create({
    */
   _setCss(propertyName) {
     if (isPresent(this.get(propertyName))) {
-      this.$().css(propertyName, this.get(propertyName));
+      this.element.style[propertyName] = this.get(propertyName);
     }
   }
 });
