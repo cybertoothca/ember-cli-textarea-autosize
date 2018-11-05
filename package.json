@@ -65,7 +65,7 @@
     "ember-cli-sass": "^8.0.1",
     "ember-cli-shims": "^1.2.0",
     "ember-cli-sri": "^2.1.0",
-    "ember-cli-text-support-mixins": "^2.0.0-rc.3",
+    "ember-cli-text-support-mixins": "^2.0.1",
     "ember-cli-uglify": "^2.0.0",
     "ember-disable-prototype-extensions": "^1.1.2",
     "ember-export-application-global": "^2.0.0",

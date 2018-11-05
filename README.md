@@ -1,14 +1,16 @@
-# ember-cli-textarea-autosize [![GitHub version](http://badge.fury.io/gh/cybertoothca%2Fember-cli-textarea-autosize.svg)](http://badge.fury.io/gh/cybertoothca%2Fember-cli-textarea-autosize) ![](http://embadge.io/v1/badge.svg?start=1.13.0)
+# ember-cli-textarea-autosize
 
-[![npm version](http://badge.fury.io/js/ember-cli-textarea-autosize.svg)](http://badge.fury.io/js/ember-cli-textarea-autosize) ![downloads](http://img.shields.io/npm/dy/ember-cli-textarea-autosize.svg) [![CircleCI](http://circleci.com/gh/cybertoothca/ember-cli-textarea-autosize.svg?style=shield)](http://circleci.com/gh/cybertoothca/ember-cli-textarea-autosize) [![Code Climate](http://codeclimate.com/github/cybertoothca/ember-cli-textarea-autosize/badges/gpa.svg)](http://codeclimate.com/github/cybertoothca/ember-cli-textarea-autosize) ![Dependencies](http://david-dm.org/cybertoothca/ember-cli-textarea-autosize.svg) [![ember-observer-badge](http://emberobserver.com/badges/ember-cli-textarea-autosize.svg)](http://emberobserver.com/addons/ember-cli-textarea-autosize) [![License](http://img.shields.io/npm/l/ember-cli-textarea-autosize.svg)](LICENSE.md)
+[![npm version](http://badge.fury.io/js/ember-cli-textarea-autosize.svg)](http://badge.fury.io/js/ember-cli-textarea-autosize) ![downloads](http://img.shields.io/npm/dy/ember-cli-textarea-autosize.svg) [![CircleCI](http://circleci.com/gh/cybertoothca/ember-cli-textarea-autosize.svg?style=shield)](http://circleci.com/gh/cybertoothca/ember-cli-textarea-autosize) [![Code Climate](http://codeclimate.com/github/cybertoothca/ember-cli-textarea-autosize/badges/gpa.svg)](http://codeclimate.com/github/cybertoothca/ember-cli-textarea-autosize) 
 
-An Ember addon that provides a textarea component that adjusts its 
+![Dependencies](http://david-dm.org/cybertoothca/ember-cli-textarea-autosize.svg) [![ember-observer-badge](http://emberobserver.com/badges/ember-cli-textarea-autosize.svg)](http://emberobserver.com/addons/ember-cli-textarea-autosize) [![License](http://img.shields.io/npm/l/ember-cli-textarea-autosize.svg)](LICENSE.md)
+
+An Ember add-on that provides a textarea component that adjusts its 
 height according to the supplied text.  Included are also several 
 mixins that can be used to ensure `autofocus` works properly, 
 focused text inputs have their text selected, and ctrl+enter will 
 submit the nearest form.
 
-This addon installs from bower and uses the `autosize.js` library
+This add-on installs from bower and uses the `autosize.js` library
 from Jack Moore: [https://github.com/jackmoore/autosize](https://github.com/jackmoore/autosize).
 
 
@@ -30,7 +32,7 @@ from Jack Moore: [https://github.com/jackmoore/autosize](https://github.com/jack
 
 ## Installation
 
-Like most other Ember addons:
+Like most other Ember add-ons:
 
 ```
 ember install ember-cli-textarea-autosize
@@ -40,7 +42,7 @@ ember install ember-cli-textarea-autosize
 
 When working through the Ember upgrade process, I recommend
 invoking the `ember install ember-cli-textarea-autosize` command once 
-you are done to get the latest version of the addon.
+you are done to get the latest version of the add-on.
 
 ### Bower & JQuery
 
@@ -64,9 +66,9 @@ are used by this textarea add-on to include support for:
 The demonstration web application can be found here:
 [http://ember-cli-textarea-autosize.cybertooth.io/](http://ember-cli-textarea-autosize.cybertooth.io/). 
 
-## What Does This Addon Do?
+## What Does This Add-on Do?
 
-This addon gives you access to the following _component_:
+This add-on gives you access to the following _component_:
 
 * `textarea-autosize` - an extension of the Ember.TextArea that
 produces a `<textarea>` that grows in height to fit the supplied 
@@ -153,7 +155,7 @@ Check out these extra mixins at
 
 ---
 
-# Ember Addon Building And Testing
+# Ember Add-on Building And Testing
 
 ## Setup
 
@@ -174,28 +176,28 @@ yarn
 * `ember server`
 * Visit your app at http://localhost:4200.
 
-## Running Addon Tests
+## Running Add-on Tests
 
-* `npm test` (Runs `ember try:testall` to test your addon against multiple Ember versions)
+* `npm test` (Runs `ember try:testall` to test your add-on against multiple Ember versions)
 * `ember test`
 * `ember test --server`
 
-## Building The Addon
+## Building The Add-on
 
 * `ember build`
 
 For more information on using ember-cli, visit [http://ember-cli.com/](http://ember-cli.com/).
 
-# Linking This Addon For Local Testing
+# Linking This Add-on For Local Testing
 
 ## Linking
 
 Use yarn.
 
 ```bash
-# from this addon project
+# from this add-on project
 $ yarn link
-# from the other project that depends on this addon
+# from the other project that depends on this add-on
 $ yarn link ember-cli-textarea-autosize
 ```
 
@@ -204,9 +206,9 @@ $ yarn link ember-cli-textarea-autosize
 Again, use yarn.
 
 ```bash
-# from the other project that linked to this addon
+# from the other project that linked to this add-on
 $ yarn unlink ember-cli-textarea-autosize
-# from this addon project
+# from this add-on project
 $ yarn unlink
 ```
 
