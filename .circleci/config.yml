@@ -104,7 +104,7 @@ jobs:
     - run:
         name: Ember Try
         command: ./node_modules/.bin/ember try:one ember-canary --skip-cleanup
-  test_lts_2_4:
+  test_lts_2_16:
     docker:
     - image: circleci/node:6.14.4-browsers
     steps:
@@ -119,23 +119,7 @@ jobs:
         - v1-deps-
     - run:
         name: Ember Try
-        command: ./node_modules/.bin/ember try:one ember-lts-2.4 --skip-cleanup
-  test_lts_2_8:
-    docker:
-    - image: circleci/node:6.14.4-browsers
-    steps:
-    - checkout
-    - restore_cache:
-        keys:
-        - bower-cache-{{ .Branch }}-{{ checksum "bower.json" }}
-    - restore_cache:
-        keys:
-        - v1-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
-        - v1-deps-{{ .Branch }}-
-        - v1-deps-
-    - run:
-        name: Ember Try
-        command: ./node_modules/.bin/ember try:one ember-lts-2.8 --skip-cleanup
+        command: ./node_modules/.bin/ember try:one ember-lts-2.16 --skip-cleanup
   test_lts_2_12:
     docker:
     - image: circleci/node:6.14.4-browsers
@@ -152,6 +136,38 @@ jobs:
     - run:
         name: Ember Try
         command: ./node_modules/.bin/ember try:one ember-lts-2.12 --skip-cleanup
+  test_lts_2_8:
+    docker:
+    - image: circleci/node:6.14.4-browsers
+    steps:
+    - checkout
+    - restore_cache:
+        keys:
+        - bower-cache-{{ .Branch }}-{{ checksum "bower.json" }}
+    - restore_cache:
+        keys:
+        - v1-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
+        - v1-deps-{{ .Branch }}-
+        - v1-deps-
+    - run:
+        name: Ember Try
+        command: ./node_modules/.bin/ember try:one ember-lts-2.8 --skip-cleanup
+  test_lts_2_4:
+    docker:
+    - image: circleci/node:6.14.4-browsers
+    steps:
+    - checkout
+    - restore_cache:
+        keys:
+        - bower-cache-{{ .Branch }}-{{ checksum "bower.json" }}
+    - restore_cache:
+        keys:
+        - v1-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
+        - v1-deps-{{ .Branch }}-
+        - v1-deps-
+    - run:
+        name: Ember Try
+        command: ./node_modules/.bin/ember try:one ember-lts-2.4 --skip-cleanup
 workflows:
   version: 2
   ember_try:
@@ -171,6 +187,10 @@ workflows:
         - bower_and_cache
         - yarn_and_cache
     - test_canary:
+        requires:
+        - bower_and_cache
+        - yarn_and_cache
+    - test_lts_2_16:
         requires:
         - bower_and_cache
         - yarn_and_cache
