@@ -1,0 +1,16 @@
+[ver:1,total:1380]
+package.json:320,1541448000:320,m
+README.md:270,1541448000:270,m
+addon/components/textarea-autosize.js:200,1541444400:180,1541448000:20,r
+index.js:180,1541444400:180,r
+addon/mixins/autosize.js:173,1541444400:173,r
+.gtm/terminal.app:140,1541444400:30,1541448000:110,r
+ember-cli-build.js:30,1541444400:30,m
+testem.js:13,1541444400:13,m
+bower_components/jquery/src/manipulation.js:10,1541444400:10,r
+.travis.yml:10,1541444400:10,r
+blueprints/ember-cli-textarea-autosize/index.js:8,1541444400:8,r
+config/deploy.js:8,1541444400:8,r
+bower_components/jquery/dist/jquery.js:6,1541444400:6,r
+bower_components/jquery/dist/core.js:6,1541444400:6,r
+config/environment.js:6,1541444400:6,r
