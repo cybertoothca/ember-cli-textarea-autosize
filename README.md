@@ -11,15 +11,53 @@ submit the nearest form.
 This addon installs from bower and uses the `autosize.js` library
 from Jack Moore: [https://github.com/jackmoore/autosize](https://github.com/jackmoore/autosize).
 
+
+## Built With
+
+[![ember-cli-2.18.2](https://img.shields.io/badge/ember--cli-2.18.2-brightgreen.svg)](https://circleci.com/gh/cybertoothca/ember-cli-text-support-mixins)
+
 ## Tested Against
 
-[![ember-lts-2.4](http://img.shields.io/badge/ember--try-ember--lts--2.4-brightgreen.svg)](https://circleci.com/gh/cybertoothca/ember-cli-textarea-autosize)
-[![ember-lts-2.8](http://img.shields.io/badge/ember--try-ember--lts--2.8-brightgreen.svg)](https://circleci.com/gh/cybertoothca/ember-cli-textarea-autosize)
-[![ember-lts-2.12](http://img.shields.io/badge/ember--try-ember--lts--2.12-brightgreen.svg)](https://circleci.com/gh/cybertoothca/ember-cli-textarea-autosize)
+[![ember-lts-2.4](https://img.shields.io/badge/ember--try-ember--lts--2.4-brightgreen.svg)](https://circleci.com/gh/cybertoothca/ember-cli-text-support-mixins)
+[![ember-lts-2.8](https://img.shields.io/badge/ember--try-ember--lts--2.8-brightgreen.svg)](https://circleci.com/gh/cybertoothca/ember-cli-text-support-mixins)
+[![ember-lts-2.12](https://img.shields.io/badge/ember--try-ember--lts--2.12-brightgreen.svg)](https://circleci.com/gh/cybertoothca/ember-cli-text-support-mixins)
+[![ember-lts-2.16](https://img.shields.io/badge/ember--try-ember--lts--2.16-brightgreen.svg)](https://circleci.com/gh/cybertoothca/ember-cli-text-support-mixins)
 
-[![ember-release](http://img.shields.io/badge/ember--try-ember--release-brightgreen.svg)](https://circleci.com/gh/cybertoothca/ember-cli-textarea-autosize)
-[![ember-beta](http://img.shields.io/badge/ember--try-ember--beta-brightgreen.svg)](https://circleci.com/gh/cybertoothca/ember-cli-textarea-autosize)
-[![ember-canary](http://img.shields.io/badge/ember--try-ember--canary-brightgreen.svg)](https://circleci.com/gh/cybertoothca/ember-cli-textarea-autosize)
+[![ember-release-2.18](https://img.shields.io/badge/ember--try-ember--release--2.18-brightgreen.svg)](https://circleci.com/gh/cybertoothca/ember-cli-text-support-mixins)
+[![ember-default](https://img.shields.io/badge/ember--try-ember--default-brightgreen.svg)](https://circleci.com/gh/cybertoothca/ember-cli-text-support-mixins)
+[![ember-beta](https://img.shields.io/badge/ember--try-ember--beta-brightgreen.svg)](https://circleci.com/gh/cybertoothca/ember-cli-text-support-mixins)
+[![ember-canary](https://img.shields.io/badge/ember--try-ember--canary-brightgreen.svg)](https://circleci.com/gh/cybertoothca/ember-cli-text-support-mixins)
+
+## Installation
+
+Like most other Ember addons:
+
+```
+ember install ember-cli-textarea-autosize
+```
+
+### Upgrading
+
+When working through the Ember upgrade process, I recommend
+invoking the `ember install ember-cli-textarea-autosize` command once 
+you are done to get the latest version of the addon.
+
+### Bower & JQuery
+
+This add-on does not depend on bower libraries when installed in your application or add-on.
+
+This add-on no longer depends on JQuery.  
+
+### Dependencies
+
+#### `ember-cli-text-support-mixins`
+
+The helper mixins from [`ember-cli-text-support-mixins`](http://ember-cli-text-support-mixins.cybertooth.io/) 
+are used by this textarea add-on to include support for:
+
+* autofocus
+* <kbd>CTRL+ENTER</kbd> submits the closest form
+* textarea focus automatically selects text
 
 ## Demo
 
@@ -58,25 +96,6 @@ import CtrlEnterSubmitsForm from 'ember-cli-text-support-mixins/mixins/ctrl-ente
 ```
 
 [Head over here for the mixin documentation](https://github.com/cybertoothca/ember-cli-text-support-mixins#mixins).
-
-## Requirements
-
-* Ember >= 1.13.0
-* Ember CLI
-
-## Installation
-
-Like most other Ember addons:
-
-```
-ember install ember-cli-textarea-autosize
-```
-
-### Upgrading
-
-When working through the Ember upgrade process, I recommend
-invoking the `ember install ember-cli-textarea-autosize` command once 
-you are done to get the latest version of the addon.
 
 ## Usage
 
