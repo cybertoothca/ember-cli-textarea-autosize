@@ -13,7 +13,6 @@ submit the nearest form.
 This add-on installs from bower and uses the `autosize.js` library
 from Jack Moore: [https://github.com/jackmoore/autosize](https://github.com/jackmoore/autosize).
 
-
 ## Built With
 
 [![ember-cli-2.18.2](https://img.shields.io/badge/ember--cli-2.18.2-brightgreen.svg)](https://circleci.com/gh/cybertoothca/ember-cli-text-support-mixins)
