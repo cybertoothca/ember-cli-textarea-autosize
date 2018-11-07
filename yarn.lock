@@ -371,9 +371,9 @@ asynckit@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
 
-autosize@^3.0.21:
-  version "3.0.21"
-  resolved "https://registry.yarnpkg.com/autosize/-/autosize-3.0.21.tgz#f182f40d17757d978a139a4c9ca40c4c0e448603"
+autosize@^4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/autosize/-/autosize-4.0.2.tgz#073cfd07c8bf45da4b9fd153437f5bafbba1e4c9"
 
 aws-sdk@^2.6.12:
   version "2.103.0"
@@ -2384,9 +2384,9 @@ ember-cli-test-loader@^2.0.0:
   dependencies:
     ember-cli-babel "^6.8.1"
 
-ember-cli-text-support-mixins@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/ember-cli-text-support-mixins/-/ember-cli-text-support-mixins-1.1.1.tgz#0e870b8ad2e2c6d50b770cf9af004644fc72ab19"
+ember-cli-text-support-mixins@~1:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/ember-cli-text-support-mixins/-/ember-cli-text-support-mixins-1.1.2.tgz#727e79246d9331a325c93474886beefba3ab2a32"
   dependencies:
     ember-cli-babel "^6.3.0"
     ember-cli-node-assets "^0.2.2"
