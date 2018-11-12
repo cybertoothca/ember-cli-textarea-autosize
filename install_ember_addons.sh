@@ -1,13 +1,26 @@
 #!/bin/sh
 
-ember install ember-cli-bootstrap3-sass
+yarn add --dev clipboard
+
+ember install ct-emberjs-bling
+
+ember install @fortawesome/ember-fontawesome
+yarn add @fortawesome/free-solid-svg-icons --dev
+yarn add @fortawesome/free-brands-svg-icons --dev
+
+ember install ember-auto-import
+
+ember install ember-cli-app-version
+
+ember install ember-cli-bootstrap-4
+
 ember install ember-cli-deploy
 ember install ember-cli-deploy-build
 ember install ember-cli-deploy-gzip
 ember install ember-cli-deploy-s3
-ember install ember-cli-font-awesome-sass
-ember install ember-cli-text-support-mixins@~1
+ember install ember-cli-deploy-slack
 
-yarn add autosize@~4 --dev
-yarn add bootswatch@3.3.7 --dev
+ember install ember-cli-text-support-mixins@~2.0.0
+
+yarn add autosize --dev
 yarn add ember-cli-node-assets  # this must go into "dependencies" NOT "devDependencies"

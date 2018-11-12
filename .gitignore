@@ -21,4 +21,9 @@ testem.log
 .node_modules.ember-try/
 bower.json.ember-try
 package.json.ember-try
+
+# npm package-lock.json can get stale because we use yarn; someone might commit a npm installed `package-lock.json`
+package-lock.json
+
+# git time metric
 /.gtm/

@@ -1,0 +1,44 @@
+<div class="form">
+  <div class="form-group">
+    <label for="js-textarea-autosize-autofocus">
+      Autofocus
+    </label>
+    {{textarea-autosize
+      aria-describedby="js-textarea-autosize-autofocus-helpblock"
+      autofocus=true
+      class="form-control"
+      id="js-textarea-autosize-autofocus"
+      placeholder="Cursor Focused On This Input"
+    }}
+    <small id="js-textarea-autosize-autofocus-helpblock" class="form-text text-muted">
+      Autofocus will work across Ember transitions: <code>\{{textarea-autosize autofocus=true ...}}</code>
+    </small>
+  </div>
+  <div class="form-group">
+    <label for="js-textarea-autosize-select">Select Text (Default Behaviour)</label>
+    {{textarea-autosize
+      aria-describedby="js-textarea-autosize-select-helpblock"
+      class="form-control"
+      id="js-textarea-autosize-select"
+      placeholder="Text Was Cleared, Nothing To Select"
+      value="On Focus Text Is Selected"
+    }}
+    <small id="js-textarea-autosize-select-helpblock" class="form-text text-muted">
+      Click/tab to focus, text selected: <code>\{{textarea-autosize focusSelectsText?=true ...}}</code>
+    </small>
+  </div>
+  <div class="form-group">
+    <label for="js-text-area-esc-clears">Escape Clears Textarea (Default Behaviour)</label>
+    {{textarea-autosize
+      aria-describedby="js-text-area-esc-clears-helpblock"
+      class="form-control"
+      id="js-text-area-esc-clears"
+      placeholder="Text Was Cleared"
+      value="Press Escape To Clear Text"
+    }}
+    <small id="js-text-area-esc-clears-helpblock" class="form-text text-muted">
+      By default pressing <kbd>ESC</kbd> will clear textbox content: <code>\{{textarea-autosize escapeKeyClears?=true
+      ...}}</code>
+    </small>
+  </div>
+</div>

@@ -7,11 +7,11 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
-  this.route('demo-focus-selects-text');
-  this.route('demo-trigger-focus');
-  this.route('demo-min-height');
-  this.route('demo-max-height');
-  this.route('demo-ctrl-enter-submits');
+  this.route('demo', function () {
+    this.route('max-height');
+    this.route('min-height');
+    this.route('ctrl-enter-submits');
+  });
 });
 
 export default Router;

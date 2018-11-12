@@ -1,0 +1,23 @@
+{{#ct-section-demo class="my-3" as |section|}}
+  {{#section.list-group}}
+    <div class="list-group-item list-group-item-dark">
+      <h4 class="mb-1">Textarea</h4>
+      <code class="small">\{{textarea-autosize}}</code>
+    </div>
+
+    {{#link-to "demo.index" class="list-group-item list-group-item-action"}}
+      Text Support Mixed In
+    {{/link-to}}
+    {{#link-to "demo.min-height" class="list-group-item list-group-item-action"}}
+      Rows/Min-Height
+    {{/link-to}}
+    {{#link-to "demo.max-height" class="list-group-item list-group-item-action"}}
+      Max-Height
+    {{/link-to}}
+    {{#link-to "demo.ctrl-enter-submits" class="list-group-item list-group-item-action"}}
+      <kbd>CTRL+ENTER</kbd> Submits
+    {{/link-to}}
+
+  {{/section.list-group}}
+  {{#section.outlet}}{{outlet}}{{/section.outlet}}
+{{/ct-section-demo}}

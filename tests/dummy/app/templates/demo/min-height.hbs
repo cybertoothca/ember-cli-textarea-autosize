@@ -1,0 +1,47 @@
+<div class="form">
+  <div class="form-group">
+    <label for="js-textarea-autosize-default-height">
+      Default Height
+    </label>
+    {{textarea-autosize
+      aria-describedby="js-textarea-autosize-default-height-helpblock"
+      autofocus=true
+      class="form-control"
+      id="js-textarea-autosize-default-height"
+      placeholder="Textarea's Default Height"
+    }}
+    <small id="js-textarea-autosize-default-height-helpblock" class="form-text text-muted">
+      The default height of <code>\{{textarea-autosize ...}}</code>
+    </small>
+  </div>
+  <div class="form-group">
+    <label for="js-textarea-autosize-rows-6">
+      Rows Attribute
+    </label>
+    {{textarea-autosize
+      aria-describedby="js-textarea-autosize-rows-6-helpblock"
+      class="form-control"
+      id="js-textarea-autosize-rows-6"
+      placeholder="Row Count Set To 6"
+      rows=6
+    }}
+    <small id="js-textarea-autosize-rows-6-helpblock" class="form-text text-muted">
+      Six rows tall <code>\{{textarea-autosize rows=6 ...}}</code>
+    </small>
+  </div>
+  <div class="form-group">
+    <label for="js-textarea-autosize-min-height">
+      Min-Height Attribute
+    </label>
+    {{textarea-autosize
+      aria-describedby="js-textarea-autosize-min-height-helpblock"
+      class="form-control"
+      id="js-textarea-autosize-min-height"
+      min-height="100px"
+      placeholder="Minimum Height Set To 100px"
+    }}
+    <small id="js-textarea-autosize-min-height-helpblock" class="form-text text-muted">
+      100px high <code>\{{textarea-autosize min-height="100px" ...}}</code>
+    </small>
+  </div>
+</div>
