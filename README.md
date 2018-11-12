@@ -5,10 +5,9 @@
 ![Dependencies](http://david-dm.org/cybertoothca/ember-cli-textarea-autosize.svg) [![ember-observer-badge](http://emberobserver.com/badges/ember-cli-textarea-autosize.svg)](http://emberobserver.com/addons/ember-cli-textarea-autosize) [![License](http://img.shields.io/npm/l/ember-cli-textarea-autosize.svg)](LICENSE.md)
 
 An Ember add-on that provides a textarea component that adjusts its 
-height according to the supplied text.  Included are also several 
-mixins that can be used to ensure `autofocus` works properly, 
-focused text inputs have their text selected, and ctrl+enter will 
-submit the nearest form.
+height according to the supplied text.  Included is the Text Support 
+Mixins for autofocus, focus selects text, escape-pressed clears text,
+and CTRL+ENTER submits `closest('form')`.
 
 This add-on installs from bower and uses the `autosize.js` library
 from Jack Moore: [https://github.com/jackmoore/autosize](https://github.com/jackmoore/autosize).
@@ -29,9 +28,14 @@ from Jack Moore: [https://github.com/jackmoore/autosize](https://github.com/jack
 [![ember-beta](https://img.shields.io/badge/ember--try-ember--beta-brightgreen.svg)](https://circleci.com/gh/cybertoothca/ember-cli-text-support-mixins)
 [![ember-canary](https://img.shields.io/badge/ember--try-ember--canary-brightgreen.svg)](https://circleci.com/gh/cybertoothca/ember-cli-text-support-mixins)
 
+## Demo & Documentation
+
+The demonstration web application can be found here:
+[https://ember-cli-textarea-autosize.cybertooth.io/](https://ember-cli-textarea-autosize.cybertooth.io/). 
+
 ## Installation
 
-Like most other Ember add-ons:
+The following command will install this add-on:
 
 ```
 ember install ember-cli-textarea-autosize
@@ -57,118 +61,22 @@ The helper mixins from [`ember-cli-text-support-mixins`](http://ember-cli-text-s
 are used by this textarea add-on to include support for:
 
 * autofocus
+* <kbd>ESCAPE</kbd> clears input text
 * <kbd>CTRL+ENTER</kbd> submits the closest form
 * textarea focus automatically selects text
 
-## Demo
+#### `autosize`
 
-The demonstration web application can be found here:
-[http://ember-cli-textarea-autosize.cybertooth.io/](http://ember-cli-textarea-autosize.cybertooth.io/). 
-
-## What Does This Add-on Do?
-
-This add-on gives you access to the following _component_:
-
-* `textarea-autosize` - an extension of the Ember.TextArea that
-produces a `<textarea>` that grows in height to fit the supplied 
-content.
-
-### Mixins Moved To `ember-cli-text-support-mixins` Add-On
-
-Before 1.1 the `TriggerFocus`, `FocusSelectsText`, and `CtrlEnterSubmitsForm` mixins
-were available in this add-on.  They are no longer here, and if you were using them your
-code breaks.
-
-You should be able to easily move your code over to the `ember-cli-text-support-mixins`
-variation:
-
-```js
-// import TriggerFocus from 'ember-cli-textarea-autosize/mixins/trigger-focus'
-// ...now becomes ...
-import TriggerFocus from 'ember-cli-text-support-mixins/mixins/trigger-focus';
-
-// import FocusSelectsTextMixin from 'ember-cli-textarea-autosize/mixins/focus-selects-text';
-// ... now becomes ...
-import FocusSelectsText from 'ember-cli-text-support-mixins/mixins/focus-selects-text';
-
-// import CtrlEnterSubmitsFormMixin from 'ember-cli-textarea-autosize/mixins/ctrl-enter-submits-form';
-// ... now becomes ...
-import CtrlEnterSubmitsForm from 'ember-cli-text-support-mixins/mixins/ctrl-enter-submits-form';
-```
-
-[Head over here for the mixin documentation](https://github.com/cybertoothca/ember-cli-text-support-mixins#mixins).
-
-## Usage
-
-This textarea component extends the `ember-cli-text-support-mixins` add-on's
-`text-area` component.  This text area does not accept a block, instead always
-pass your value to the `value attribute`. 
-
-```handlebars
-{{textarea-autosize value=someModel.largeTextAttribute}}
-```
-
-### Minimum Height (default is 2 rows)
-
-If you need to set the minimum height of the `<textarea>`, set the 
-`rows` property:
-
-```handlebars
-{{textarea-autosize rows=6 ...}}
-```
-
-...or you can specify the `min-height` property
-
-```handlebars
-{{textarea-autosize min-height="200px" ...}}
-```
-
-### Maximum Height (when to start scrolling)
-
-The `<textarea>` will continue to grow indefinitely unless you set the
-`max-height` property:
-
-```handlebars
-{{textarea-autosize max-height="500px" ...}}
-```
-
-## For additional information about the Ember.TextArea:
-
- * [`ember-cli-text-support-mixins` `text-area` documentation](https://github.com/cybertoothca/ember-cli-text-support-mixins#text-area)
- * [Check out the Ember guide](https://guides.emberjs.com/v2.8.0/templates/input-helpers/#toc_text-areas)
- * [Also familiarize yourself with the TextArea API documents](http://emberjs.com/api/classes/Ember.TextArea.html)
- 
-## Extras
-
-The `{{textarea-autosize}}` automatically:
-
-1. Incorporates a mixin that corrects a quirk in Ember where the 
-`autofocus=true` feature works across template transitions.
-1. Includes a mixin that will select any text when the textarea is 
-focused.
-1. Will attempt to submit the _nearest_ form when `CTRL+ENTER` is
-pressed.
-
-Check out these extra mixins at
-[ember-cli-text-support-mixins](https://github.com/cybertoothca/ember-cli-text-support-mixins#mixins).
+Jack Moore's [https://github.com/jackmoore/autosize](https://github.com/jackmoore/autosize) NPM library.
 
 ---
 
-# Ember Add-on Building And Testing
+# Contributing
 
 ## Setup
 
-### Checkout
-
-```
-git clone git@github.com:cybertoothca/ember-cli-textarea-autosize.git
-```
-
-### With Yarn
-
-```
-yarn
-```
+* `git clone git@github.com:cybertoothca/ember-cli-textarea-autosize.git`
+* `yarn`
 
 ## Running The Dummy Application
 
@@ -226,11 +134,14 @@ Deploy by invoking the following command: `ember deploy production`
 
 Confirm your changes are showing up in our S3 container: http://ember-cli-textarea-autosize.cybertooth.io/
 
+You may need to go into AWS CloudFront to expire the index.html file before the site 
+changes are picked up (see [issue](https://github.com/cybertoothca/ember-cli-text-support-mixins/issues/29)).
+
 # Releasing & Publishing To NPM
 
-```
-npm version x.y.z-sub.#
-git push
-git push --tags
-npm publish
+```bash
+# `yarn publish` will prompt you for the next/new version name
+$ yarn publish
+$ git push
+$ git push --tags
 ```
