@@ -1,0 +1,18 @@
+<div class="form">
+  <div class="form-group">
+    <label for="js-textarea-autosize-max-height">
+      Max-Height Attribute
+    </label>
+    {{textarea-autosize
+      aria-describedby="js-textarea-autosize-max-height-helpblock"
+      autofocus=true
+      class="form-control"
+      id="js-textarea-autosize-max-height"
+      max-height="150px"
+      placeholder="Maximum Height Set To 150px"
+    }}
+    <small id="js-textarea-autosize-max-height-helpblock" class="form-text text-muted">
+      Textarea won't grow taller than 150px <code>\{{textarea-autosize max-height="150px" ...}}</code>
+    </small>
+  </div>
+</div>

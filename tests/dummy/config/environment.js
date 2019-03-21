@@ -1,7 +1,6 @@
-/* eslint-env node */
 'use strict';
 
-module.exports = function (environment) {
+module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'dummy',
     environment,
@@ -21,6 +20,12 @@ module.exports = function (environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+    fontawesome: {
+      icons: {
+        'free-brands-svg-icons': 'all',
+        'free-solid-svg-icons': 'all'
+      }
     }
   };
 
@@ -41,10 +46,11 @@ module.exports = function (environment) {
     ENV.APP.LOG_VIEW_LOOKUPS = false;
 
     ENV.APP.rootElement = '#ember-testing';
+    ENV.APP.autoboot = false;
   }
 
   if (environment === 'production') {
-
+    // here you can enable a production-specific feature
   }
 
   return ENV;

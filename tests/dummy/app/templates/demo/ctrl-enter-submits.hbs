@@ -1,0 +1,52 @@
+<h3>
+  Triggered Via
+  <code class="small">
+    {{fa-icon "angle-left"}}form \{{action "withSubmit" on="submit"}}{{fa-icon "angle-right"}} ...
+  </code>
+</h3>
+
+<form {{action "withSubmit" on="submit"}}>
+  <div class="form-group">
+    <label for="js-text-submit-with-on">
+      <kbd>CTRL+ENTER</kbd> Submits Turned On
+    </label>
+    {{textarea-autosize
+      aria-describedby="js-text-submit-with-on-helpblock"
+      autofocus=true
+      class="form-control"
+      ctrlEnterSubmitsForm?=true
+      id="js-text-submit-with-on"
+      placeholder="Press CTRL+ENTER To Submit"
+    }}
+    <small id="js-text-submit-with-on-helpblock" class="form-text text-muted">
+      <kbd>CTRL+ENTER</kbd> will submit form :
+      <code>\{{textarea-autosize ctrlEnterSubmitsForm?=true ...}}</code>
+    </small>
+  </div>
+</form>
+
+<h3 class="mt-5">
+  Triggered Via
+  <code class="small">
+    {{fa-icon "angle-left"}}form onsubmit=\{{action "withOnSubmit"}}{{fa-icon "angle-right"}} ...
+  </code>
+</h3>
+
+<form onsubmit={{action "withOnSubmit"}}>
+  <div class="form-group">
+    <label for="js-text-onsubmit">
+      <kbd>CTRL+ENTER</kbd> Submits Turned On
+    </label>
+    {{textarea-autosize
+      aria-describedby="js-text-onsubmit-helpblock"
+      class="form-control"
+      ctrlEnterSubmitsForm?=true
+      id="js-text-onsubmit"
+      placeholder="Press CTRL+ENTER To Submit"
+    }}
+    <small id="js-text-onsubmit-helpblock" class="form-text text-muted">
+      <kbd>CTRL+ENTER</kbd> will submit form :
+      <code>\{{textarea-autosize ctrlEnterSubmitsForm?=true ...}}</code>
+    </small>
+  </div>
+</form>

@@ -1,17 +1,17 @@
-import Ember from 'ember';
+import EmberRouter from '@ember/routing/router';
 import config from './config/environment';
 
-const Router = Ember.Router.extend({
+const Router = EmberRouter.extend({
   location: config.locationType,
   rootURL: config.rootURL
 });
 
-Router.map(function () {
-  this.route('demo-focus-selects-text');
-  this.route('demo-trigger-focus');
-  this.route('demo-min-height');
-  this.route('demo-max-height');
-  this.route('demo-ctrl-enter-submits');
+Router.map(function() {
+  this.route('demo', function () {
+    this.route('max-height');
+    this.route('min-height');
+    this.route('ctrl-enter-submits');
+  });
 });
 
 export default Router;
