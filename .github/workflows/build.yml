@@ -1,0 +1,95 @@
+name: "Build, Test, Publish Coverage"
+on: push
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    env:
+      CI: "true"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Set Node.js
+        uses: actions/setup-node@master
+        with:
+          node-version: 8.17.0
+
+      - name: Get yarn cache
+        id: yarn-cache
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - uses: actions/cache@v1
+        with:
+          path: ${{ steps.yarn-cache.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Install dependencies (yarn)
+        run: yarn --non-interactive --no-progress install
+      #      - name: Lint (hbs)
+      #        run: yarn lint:hbs
+      #      - name: Lint (js)
+      #        run: yarn lint:js
+      #      - name: Run test
+      #        run: yarn test
+      #        env:
+      #          COVERAGE: 'true'
+      - name: Run test
+        run: ./node_modules/.bin/ember t
+        env:
+          COVERAGE: "true"
+      # Ideally, we would split up the test task into separate build and run
+      # steps to get better CI log output (folding and timing information).
+      # However, this is not currently possible with ember-cli-code-coverage.
+      #
+      # See https://github.com/kategengler/ember-cli-code-coverage/issues/210
+      #
+      # - name: Build
+      #   run: yarn ember build --environment test
+      #   env:
+      #     COVERAGE: 'true'
+      # - name: Run test
+      #   run: COVERAGEyarn ember test --path dist
+      #   env:
+      #     # Due to a bug in ember-cli, running `ember test` with `--path` doesn't set `EMBER_ENV=test`
+      #     # See https://github.com/ember-cli/ember-cli/issues/8922
+      #     EMBER_ENV: test
+      #     COVERAGE: 'true'
+#      - name: Report coverage
+#        run: yarn codeclimate-test-reporter < coverage/lcov.info
+#        env:
+#          CODECLIMATE_REPO_TOKEN: 59edcfd1ffc778791af49ca594b503e7179f6bbe1991b2cc0c0a6987d103253d
+
+#  ember-try:
+#    name: ember-try (${{ matrix.scenario }})
+#    needs: test
+#    runs-on: ubuntu-latest
+#    env:
+#      CI: 'true'
+#    strategy:
+#      matrix:
+#        scenario:
+#          - release
+#          - beta
+#          - canary
+#          - lts-3.4
+#          - lts-3.8
+#          - lts-3.12
+#    steps:
+#      - name: Checkout
+#        uses: actions/checkout@v1
+#      - name: Set up Volta
+#        uses: rwjblue/setup-volta@v1
+#      - name: Install dependencies (yarn)
+#        run: yarn install
+#      - name: Setup ember-try scenario
+#        run: yarn ember try:one ember-${{ matrix.scenario }} --skip-cleanup --- cat package.json
+#      - name: Build
+#        run: yarn ember build --environment test
+#      - name: Run test
+#        # Due to a bug in ember-cli, running `ember test` with `--path` doesn't set `EMBER_ENV=test`
+#        # See https://github.com/ember-cli/ember-cli/issues/8922
+#        run: EMBER_ENV=test yarn ember test --path dist --filter="Ember Debug"
