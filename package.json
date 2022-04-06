@@ -67,6 +67,7 @@
     "ember-cli-sri": "^2.1.0",
     "ember-cli-text-support-mixins": "~1",
     "ember-cli-uglify": "^1.2.0",
+    "ember-cli-update": "^0.40",
     "ember-disable-prototype-extensions": "^1.1.2",
     "ember-export-application-global": "^2.0.0",
     "ember-load-initializers": "^1.0.0",
