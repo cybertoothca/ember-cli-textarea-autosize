@@ -3882,7 +3882,7 @@ core-object@2.0.6:
   dependencies:
     chalk "^1.1.3"
 
-core-object@^2.0.0, core-object@^2.0.6:
+core-object@^2.0.0:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/core-object/-/core-object-2.1.1.tgz#4b7a5f1edefcb1e6d0dcb58eab1b9f90bfc666a8"
   dependencies:
@@ -4356,15 +4356,16 @@ ember-cli-deploy-build@^2.0.0:
     glob "^7.1.1"
     rsvp "^3.5.0"
 
-ember-cli-deploy-gzip@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/ember-cli-deploy-gzip/-/ember-cli-deploy-gzip-1.0.0.tgz#32b6fcc96ed6d571ad4e5b0c08e53e93d717347f"
+ember-cli-deploy-gzip@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/ember-cli-deploy-gzip/-/ember-cli-deploy-gzip-2.0.1.tgz#c89ee5818331a09c942efd5ca66a193d274d146c"
+  integrity sha512-W6l+VoKCj4wSyK9LNrj9yakzIsyns8y8O/XkTrx2Qp71eiAZmxPpLsrfk+8pncUmxn9d+Cz2yM+JnG6uPTHJCg==
   dependencies:
-    chalk "^1.1.3"
-    core-object "^2.0.6"
+    chalk "^4.1.0"
+    core-object "^3.1.5"
     ember-cli-deploy-plugin "^0.2.6"
-    minimatch "^3.0.3"
-    rsvp "^3.5.0"
+    minimatch "^3.0.4"
+    rsvp "^4.8.5"
 
 ember-cli-deploy-plugin@^0.2.1, ember-cli-deploy-plugin@^0.2.2, ember-cli-deploy-plugin@^0.2.6:
   version "0.2.9"
