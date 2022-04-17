@@ -25,13 +25,13 @@ module('Integration | Component | textarea autosize', function(hooks) {
     this.set('value', undefined);
     await render(hbs`{{textarea-autosize value=value}}`);
 
-    assert.equal(find('textarea').value, '');
+    assert.dom('textarea').hasValue('');
   });
 
   test('when supplying null the textarea value is empty string', async function(assert) {
     this.set('value', null);
     await render(hbs`{{textarea-autosize value=value}}`);
 
-    assert.equal(find('textarea').value, '');
+    assert.dom('textarea').hasValue('');
   });
 });

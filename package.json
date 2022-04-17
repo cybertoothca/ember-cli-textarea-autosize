@@ -88,6 +88,7 @@
     "keyevent": "^1.1.0",
     "loader.js": "^4.2.3",
     "prettier": "^2.6.2",
+    "qunit-dom": "^1.0.0",
     "sass": "~1.48.0"
   },
   "engines": {
