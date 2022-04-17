@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  name: 'ember-cli-textarea-autosize',
+  name: require('./package').name,
   options: {
     nodeAssets: {
       autosize: {

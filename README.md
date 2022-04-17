@@ -94,8 +94,9 @@ yarn install
 
 ### Linting
 
+- `yarn lint:hbs`
 - `yarn lint:js`
-- `yarn lint:js -- --fix`
+- `yarn lint:js --fix`
 
 ### Running tests
 
