@@ -54,7 +54,7 @@
   },
   "devDependencies": {
     "@ember/jquery": "^1.0.0",
-    "@ember/optional-features": "^0.6.3",
+    "@ember/optional-features": "^2.0.0",
     "autosize": "^5.0.1",
     "bootstrap": "^3.4.1",
     "bootstrap-sass": "^3.4.3",
