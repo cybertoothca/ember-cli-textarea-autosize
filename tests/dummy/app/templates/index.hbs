@@ -1,8 +1,11 @@
 <section class="container">
   <p>
-    This component works like a typical textarea component, e.g. bind the value property to your model.
-    Keep in mind this textarea has some extra bells and whistles like fixed <em>auto-focus</em>,
-    <em>focus-selects-text</em>, and <em>ctrl-enter</em> submits the nearest form.
+    This component works like a typical textarea component, e.g. bind the value property to your model. Keep in mind
+    this textarea has some extra bells and whistles like fixed
+    <em>auto-focus</em>,
+    <em>focus-selects-text</em>, and
+    <em>ctrl-enter</em>
+    submits the nearest form.
   </p>
 </section>
 
@@ -13,16 +16,20 @@
     <div class="row">
       <div class="col-sm-4 form-group">
         {{textarea-autosize
-          autofocus=true class="form-control" placeholder="Your cursor should be here to begin with" value=""}}
+          autofocus=true
+          class="form-control"
+          placeholder="Your cursor should be here to begin with"
+          value=""
+        }}
         <p class="help-block">
           This textarea's autofocus will work between transitions.
         </p>
       </div>
       <div class="col-sm-8">
-        {{!-- @formatter:off --}}
-<pre>\{{textarea-autosize autofocus=true class="form-control" placeholder="..." value="..."}}
-</pre>
-{{!-- @formatter:on --}}
+        {{! @formatter:off }}
+        <pre>\{{textarea-autosize autofocus=true class="form-control" placeholder="..." value="..."}}
+        </pre>
+        {{! @formatter:on }}
       </div>
     </div>
   </div>

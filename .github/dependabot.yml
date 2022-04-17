@@ -1,7 +1,7 @@
 version: 2
 updates:
   - package-ecosystem: npm
-    directory: "/"
+    directory: '/'
     schedule:
       interval: daily
     open-pull-requests-limit: 15
@@ -12,11 +12,8 @@ updates:
       - dependencies
     ignore:
       - dependency-name: ember-cli
-        update-types:
-          ["version-update:semver-major", "version-update:semver-minor"]
+        update-types: ['version-update:semver-major', 'version-update:semver-minor']
       - dependency-name: ember-data
-        update-types:
-          ["version-update:semver-major", "version-update:semver-minor"]
+        update-types: ['version-update:semver-major', 'version-update:semver-minor']
       - dependency-name: ember-source
-        update-types:
-          ["version-update:semver-major", "version-update:semver-minor"]
+        update-types: ['version-update:semver-major', 'version-update:semver-minor']

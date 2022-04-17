@@ -1,11 +1,5 @@
 {
-  "predef": [
-    "document",
-    "window",
-    "-Promise",
-    "autosize",
-    "KeyEvent"
-  ],
+  "predef": ["document", "window", "-Promise", "autosize", "KeyEvent"],
   "browser": true,
   "boss": true,
   "curly": true,

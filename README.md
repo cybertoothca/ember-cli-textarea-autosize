@@ -94,8 +94,9 @@ yarn install
 
 ### Linting
 
+- `yarn lint:hbs`
 - `yarn lint:js`
-- `yarn lint:js -- --fix`
+- `yarn lint:js --fix`
 
 ### Running tests
 
@@ -124,15 +125,15 @@ variation:
 ```javascript
 // import TriggerFocus from 'ember-cli-textarea-autosize/mixins/trigger-focus'
 // ...now becomes ...
-import TriggerFocus from "ember-cli-text-support-mixins/mixins/trigger-focus";
+import TriggerFocus from 'ember-cli-text-support-mixins/mixins/trigger-focus';
 
 // import FocusSelectsTextMixin from 'ember-cli-textarea-autosize/mixins/focus-selects-text';
 // ... now becomes ...
-import FocusSelectsText from "ember-cli-text-support-mixins/mixins/focus-selects-text";
+import FocusSelectsText from 'ember-cli-text-support-mixins/mixins/focus-selects-text';
 
 // import CtrlEnterSubmitsFormMixin from 'ember-cli-textarea-autosize/mixins/ctrl-enter-submits-form';
 // ... now becomes ...
-import CtrlEnterSubmitsForm from "ember-cli-text-support-mixins/mixins/ctrl-enter-submits-form";
+import CtrlEnterSubmitsForm from 'ember-cli-text-support-mixins/mixins/ctrl-enter-submits-form';
 ```
 
 [Head over here for the mixin documentation](https://github.com/cybertoothca/ember-cli-text-support-mixins#mixins).
