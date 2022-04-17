@@ -1,13 +1,13 @@
-@import "node_modules/bootswatch/spacelab/variables";
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables";
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/theme";
-@import "node_modules/bootswatch/spacelab/bootswatch";
+@import 'node_modules/bootswatch/spacelab/variables';
+@import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables';
+@import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+@import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/theme';
+@import 'node_modules/bootswatch/spacelab/bootswatch';
 
-$fa-font-path: "/assets/font-awesome/fonts" !default;
+$fa-font-path: '/assets/font-awesome/fonts' !default;
 
-@import "node_modules/font-awesome/scss/variables";
-@import "node_modules/font-awesome/scss/font-awesome";
+@import 'node_modules/font-awesome/scss/variables';
+@import 'node_modules/font-awesome/scss/font-awesome';
 
 body {
   margin-bottom: 50%; // to allow scrolling beyond the end of the last example

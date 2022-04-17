@@ -36,10 +36,15 @@
   },
   "scripts": {
     "build": "ember build",
+    "ember-cli-update": "ember-cli-update",
+    "ember-cli-update:codemods": "ember-cli-update --run-codemods",
     "lint:js": "eslint ./*.js addon addon-test-support app blueprints config lib server test-support tests",
+    "prettier:check": "prettier --check .",
+    "prettier:write": "prettier --write .",
     "start": "ember serve",
     "test": "ember test",
-    "test:all": "ember try:each"
+    "test:all": "ember try:each",
+    "update-browserslist": "npx browserslist@latest --update-db"
   },
   "dependencies": {
     "ember-cli-babel": "^6.6.0",
@@ -82,6 +87,7 @@
     "font-awesome": "4.7",
     "keyevent": "^1.1.0",
     "loader.js": "^4.2.3",
+    "prettier": "^2.6.2",
     "sass": "~1.48.0"
   },
   "engines": {

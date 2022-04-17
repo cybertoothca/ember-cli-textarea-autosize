@@ -1,4 +1,4 @@
-name: "Build, Test, Publish Coverage"
+name: 'Build, Test, Publish Coverage'
 on: push
 
 jobs:
@@ -6,7 +6,7 @@ jobs:
     name: Test
     runs-on: ubuntu-latest
     env:
-      CI: "true"
+      CI: 'true'
     steps:
       - name: Checkout
         uses: actions/checkout@v1
@@ -40,7 +40,7 @@ jobs:
       - name: Run test
         run: ./node_modules/.bin/ember t
         env:
-          COVERAGE: "true"
+          COVERAGE: 'true'
       # Ideally, we would split up the test task into separate build and run
       # steps to get better CI log output (folding and timing information).
       # However, this is not currently possible with ember-cli-code-coverage.

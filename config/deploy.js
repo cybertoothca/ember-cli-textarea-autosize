@@ -1,16 +1,16 @@
 /* eslint-env node */
 
 module.exports = function (/*deployTarget*/) {
-  let ENV = {
+  var ENV = {
     build: {
-      environment: 'production'
+      environment: 'production',
     },
     s3: {
       bucket: 'ember-cli-textarea-autosize.cybertooth.io',
       filePattern: '**/*.{js,css,png,gif,ico,jpg,map,xml,txt,svg,swf,eot,ttf,woff,woff2,otf,html}',
       profile: 'cybertooth',
-      region: 'us-west-2'
-    }
+      region: 'us-west-2',
+    },
   };
 
   // if (deployTarget === 'production') {

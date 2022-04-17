@@ -1,7 +1,7 @@
-import { get } from "@ember/object";
-import Mixin from "@ember/object/mixin";
+import { get } from '@ember/object';
+import Mixin from '@ember/object/mixin';
 /* global autosize */
-import { isPresent } from "@ember/utils";
+import { isPresent } from '@ember/utils';
 
 /**
  * A mixin for attaching autosize to a component's element.  Is also capable of reading the `min-height` and
@@ -23,8 +23,8 @@ export default Mixin.create({
    */
   didInsertElement() {
     autosize(this.$());
-    this._setCss("min-height");
-    this._setCss("max-height");
+    this._setCss('min-height');
+    this._setCss('max-height');
   },
 
   /**

@@ -1,9 +1,9 @@
-import { start } from "ember-qunit";
+import { start } from 'ember-qunit';
 
-import { setApplication } from "@ember/test-helpers";
+import { setApplication } from '@ember/test-helpers';
 
-import Application from "../app";
-import config from "../config/environment";
+import Application from '../app';
+import config from '../config/environment';
 
 setApplication(Application.create(config.APP));
 

@@ -5,7 +5,7 @@ export default Component.extend({
   actions: {
     submit() {
       window.alert("The text-area's parent form had the submit event triggered with the Ctrl+Enter keystroke.");
-    }
+    },
   },
-  layout
+  layout,
 });
