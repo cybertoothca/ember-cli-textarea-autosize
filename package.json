@@ -60,7 +60,7 @@
     "bootstrap-sass": "^3.4.3",
     "bootswatch": "^3.4.1",
     "broccoli-asset-rev": "^2.7.0",
-    "ember-ajax": "^3.1.0",
+    "ember-ajax": "^5.1.1",
     "ember-cli": "~3.4.4",
     "ember-cli-dependency-checker": "^3.0.0",
     "ember-cli-deploy": "^1.0.1",
