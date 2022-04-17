@@ -10,3 +10,13 @@ updates:
       - nadnoslen
     labels:
       - dependencies
+    ignore:
+      - dependency-name: ember-cli
+        update-types:
+          ["version-update:semver-major", "version-update:semver-minor"]
+      - dependency-name: ember-data
+        update-types:
+          ["version-update:semver-major", "version-update:semver-minor"]
+      - dependency-name: ember-source
+        update-types:
+          ["version-update:semver-major", "version-update:semver-minor"]
