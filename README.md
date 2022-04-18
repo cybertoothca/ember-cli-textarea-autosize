@@ -13,8 +13,9 @@ from Jack Moore: [https://github.com/jackmoore/autosize](https://github.com/jack
 
 ## Compatibility
 
-- Ember.js v2.18 or above
+- Ember.js v3.4 or above
 - Ember CLI v2.13 or above
+- Node.js v8 or above
 
 ## Installation
 
@@ -80,14 +81,6 @@ The `{{textarea-autosize}}` automatically:
 1. Will attempt to submit the _nearest_ form when `CTRL+ENTER` is
    pressed.
 
----
-
-## Contributing
-
-See the [Contributing](CONTRIBUTING.md) guide for details.
-
----
-
 ## Mixins Moved To `ember-cli-text-support-mixins` Add-On
 
 Before 1.1 the `TriggerFocus`, `FocusSelectsText`, and `CtrlEnterSubmitsForm` mixins
@@ -112,6 +105,10 @@ import CtrlEnterSubmitsForm from 'ember-cli-text-support-mixins/mixins/ctrl-ente
 ```
 
 [Head over here for the mixin documentation](https://github.com/cybertoothca/ember-cli-text-support-mixins#mixins).
+
+## Contributing
+
+See the [Contributing](CONTRIBUTING.md) guide for details.
 
 ## License
 

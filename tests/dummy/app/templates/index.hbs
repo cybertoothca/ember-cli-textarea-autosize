@@ -15,12 +15,7 @@
 
     <div class="row">
       <div class="col-sm-4 form-group">
-        {{textarea-autosize
-          autofocus=true
-          class="form-control"
-          placeholder="Your cursor should be here to begin with"
-          value=""
-        }}
+        <TextareaAutosize @autofocus={{true}} @class="form-control" @placeholder="Your cursor should be here to begin with" @value="" />
         <p class="help-block">
           This textarea's autofocus will work between transitions.
         </p>
@@ -37,19 +32,19 @@
 
 <section>
   <div class="container">
-    {{min-height}}
+    <MinHeight />
   </div>
 
 </section>
 
 <section>
   <div class="container">
-    {{max-height}}
+    <MaxHeight />
   </div>
 </section>
 
 <section>
   <div class="container">
-    {{ctrl-enter-submits}}
+    <CtrlEnterSubmits />
   </div>
 </section>
