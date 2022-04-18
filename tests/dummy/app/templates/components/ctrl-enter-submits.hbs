@@ -4,7 +4,7 @@
   <div class="col-sm-4">
     <form class="form" {{action "submit" on="submit"}}>
       <div class="form-group">
-        {{textarea-autosize class="form-control" max-height="100px" placeholder="Ctrl+Enter will submit nearest form."}}
+        <TextareaAutosize @class="form-control" @max-height="100px" @placeholder="Ctrl+Enter will submit nearest form." />
         <p class="help-block">
           Press Ctrl+Enter to submit the form that this textarea belongs to. The label will flash success colour once
           the submit event is triggered.
@@ -27,12 +27,7 @@
   <div class="col-sm-4">
     <form class="form" {{action "submit" on="submit"}}>
       <div class="form-group">
-        {{textarea-autosize
-          class="form-control"
-          ctrlEnterSubmitsForm?=false
-          max-height="100px"
-          placeholder="Ctrl+Enter will NOT submit nearest form."
-        }}
+        <TextareaAutosize @class="form-control" @ctrlEnterSubmitsForm?={{false}} @max-height="100px" @placeholder="Ctrl+Enter will NOT submit nearest form." />
         <p class="help-block">
           You can turn off Ctrl+Enter form submission by supplying
           <code>ctrlEnterSubmitsForm?=false</code>.
