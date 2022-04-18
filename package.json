@@ -94,7 +94,7 @@
     "loader.js": "^4.7.0",
     "prettier": "^2.6.2",
     "qunit-dom": "^1.0.0",
-    "sass": "~1.48.0",
+    "sass": "~1.50.0",
     "webpack": "^5.72.0"
   },
   "engines": {
