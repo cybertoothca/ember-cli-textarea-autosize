@@ -72,7 +72,7 @@
     "ember-cli-sass": "^10.0.0",
     "ember-cli-sri": "^2.1.1",
     "ember-cli-template-lint": "^2.0.2",
-    "ember-cli-text-support-mixins": "~3.12.0",
+    "ember-cli-text-support-mixins": "~3.16.1",
     "ember-cli-uglify": "^3.0.0",
     "ember-cli-update": "~0.54",
     "ember-disable-prototype-extensions": "^1.1.3",
