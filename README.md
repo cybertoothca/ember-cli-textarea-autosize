@@ -13,9 +13,9 @@ from Jack Moore: [https://github.com/jackmoore/autosize](https://github.com/jack
 
 ## Compatibility
 
-- Ember.js v3.4 or above
+- Ember.js v3.12 or above
 - Ember CLI v2.13 or above
-- Node.js v8 or above
+- Node.js v10 or above
 
 ## Installation
 

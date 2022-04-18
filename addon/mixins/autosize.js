@@ -14,7 +14,7 @@ export default Mixin.create({
    * @see http://www.jacklmoore.com/autosize/
    */
   willDestroyElement() {
-    autosize.destroy(this.$());
+    autosize.destroy(this.element);
   },
 
   /**
@@ -22,7 +22,7 @@ export default Mixin.create({
    * @see https://github.com/jackmoore/autosize
    */
   didInsertElement() {
-    autosize(this.$());
+    autosize(this.element);
     this._setCss('min-height');
     this._setCss('max-height');
   },
