@@ -1,6 +1,7 @@
+import autosize from 'autosize';
+
 import { get } from '@ember/object';
 import Mixin from '@ember/object/mixin';
-/* global autosize */
 import { isPresent } from '@ember/utils';
 
 /**
