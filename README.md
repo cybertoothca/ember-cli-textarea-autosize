@@ -1,6 +1,8 @@
-# ember-cli-textarea-autosize [![version](http://badge.fury.io/js/ember-cli-textarea-autosize.svg)](http://badge.fury.io/js/ember-cli-textarea-autosize)
+# ember-cli-textarea-autosize
 
-![downloads](http://img.shields.io/npm/dy/ember-cli-textarea-autosize.svg) [![Code Climate](http://codeclimate.com/github/cybertoothca/ember-cli-textarea-autosize/badges/gpa.svg)](http://codeclimate.com/github/cybertoothca/ember-cli-textarea-autosize) [![ember-observer-badge](http://emberobserver.com/badges/ember-cli-textarea-autosize.svg)](http://emberobserver.com/addons/ember-cli-textarea-autosize)
+[![npm version](http://badge.fury.io/js/ember-cli-textarea-autosize.svg)](http://badge.fury.io/js/ember-cli-textarea-autosize) ![downloads](https://img.shields.io/npm/dy/ember-cli-textarea-autosize.svg) [![Code Climate](http://codeclimate.com/github/cybertoothca/ember-cli-textarea-autosize/badges/gpa.svg)](http://codeclimate.com/github/cybertoothca/ember-cli-textarea-autosize)
+
+[![ember-observer-badge](http://emberobserver.com/badges/ember-cli-textarea-autosize.svg)](http://emberobserver.com/addons/ember-cli-textarea-autosize)
 
 An Ember addon that provides a textarea component that adjusts its
 height according to the supplied text. Included are also several
@@ -20,7 +22,13 @@ This addon uses the `autosize.js` library from Jack Moore: [https://github.com/j
 
 ```
 ember install ember-cli-textarea-autosize
+
+yarn add -D ember-auto-import webpack
 ```
+
+### Dependencies
+
+`ember-auto-import` is being leveraged to bring in Jack Moore's `autosize` library as well as some `keyevent` constants. You don't need to do anything special but make sure your Ember `app` has `ember-auto-import` 2+ installed (which also requires you to install the latest `webpack`).
 
 ## Demo
 
