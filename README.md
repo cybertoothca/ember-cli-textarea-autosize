@@ -8,8 +8,7 @@ mixins that can be used to ensure `autofocus` works properly,
 focused text inputs have their text selected, and ctrl+enter will
 submit the nearest form.
 
-This addon installs from bower and uses the `autosize.js` library
-from Jack Moore: [https://github.com/jackmoore/autosize](https://github.com/jackmoore/autosize).
+This addon uses the `autosize.js` library from Jack Moore: [https://github.com/jackmoore/autosize](https://github.com/jackmoore/autosize).
 
 ## Compatibility
 
@@ -43,7 +42,7 @@ This textarea component extends the `ember-cli-text-support-mixins` add-on's
 pass your value to the `value attribute`.
 
 ```handlebars
-{{textarea-autosize value=someModel.largeTextAttribute}}
+<TextareaAutosize @value='someModel.largeTextAttribute' />
 ```
 
 ### Minimum Height (default is 2 rows)
@@ -52,13 +51,13 @@ If you need to set the minimum height of the `<textarea>`, set the
 `rows` property:
 
 ```handlebars
-{{textarea-autosize rows=6 ...}}
+<TextareaAutosize rows='6' ... />
 ```
 
 ...or you can specify the `min-height` property
 
 ```handlebars
-{{textarea-autosize min-height="200px" ...}}
+<TextareaAutosize min-height='200px' ... />
 ```
 
 ### Maximum Height (when to start scrolling)
@@ -67,12 +66,12 @@ The `<textarea>` will continue to grow indefinitely unless you set the
 `max-height` property:
 
 ```handlebars
-{{textarea-autosize max-height="500px" ...}}
+<TextareaAutosize max-height='500px' ... />
 ```
 
 ## Extras
 
-The `{{textarea-autosize}}` automatically:
+The `<TextareaAutosize />` automatically:
 
 1. Incorporates a mixin that corrects a quirk in Ember where the
    `autofocus=true` feature works across template transitions.

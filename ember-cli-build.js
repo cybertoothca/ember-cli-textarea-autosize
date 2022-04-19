@@ -4,15 +4,6 @@ const EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 
 module.exports = function (defaults) {
   let app = new EmberAddon(defaults, {
-    nodeAssets: {
-      autosize: {
-        vendor: {
-          srcDir: 'dist',
-          destDir: 'ember-cli-textarea-autosize',
-          include: ['autosize.js'],
-        },
-      },
-    },
     sassOptions: {
       includePaths: [
         'node_modules/bootstrap-sass/assets/stylesheets',
@@ -57,9 +48,6 @@ module.exports = function (defaults) {
   app.import('node_modules/font-awesome/fonts/fontawesome-webfont.woff2', {
     destDir: 'assets/font-awesome/fonts',
   });
-
-  // autosize via `nodeAssets`
-  app.import('vendor/ember-cli-textarea-autosize/autosize.js');
 
   return app.toTree();
 };
