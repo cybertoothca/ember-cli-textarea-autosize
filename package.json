@@ -48,7 +48,7 @@
     "update-browserslist": "npx browserslist@latest --update-db"
   },
   "dependencies": {
-    "autosize": "^5.0.1",
+    "autosize": "^6.0.0",
     "ember-auto-import": "^2.4.1",
     "ember-cli-babel": "^7.17.2",
     "ember-cli-htmlbars": "^6.0.1",
